@@ -13,6 +13,7 @@ class TicketsController < ApplicationController
     new_ticket.email = params[:email]
     new_ticket.ref_id = params[:stripeToken]
     new_ticket.save
+    # call api to create charge with token.
   end
 
 end
