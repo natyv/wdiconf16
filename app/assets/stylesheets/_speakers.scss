@@ -2,8 +2,20 @@
   background-color: lightblue;
 }
 
-
-
 .headshot {
   border-radius: 50%;
+}
+
+.speakers {
+  h4 {
+    text-align: center;
+  }
+}
+
+.talk {
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 12%;
 }

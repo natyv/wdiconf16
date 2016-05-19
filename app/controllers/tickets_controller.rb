@@ -4,6 +4,7 @@ class TicketsController < ApplicationController
 
   def index
     @sponsors = Sponsor.all
+    @speakers = Speaker.all
   end
 
   def tickets

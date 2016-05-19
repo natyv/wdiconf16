@@ -1,77 +1,41 @@
-<div class="container speakers">
+<div class="speakers container">
   <h2>Speakers</h2>
-
-  <div class="row">
-
-    <div class="six columns left-speakers">
-      <div class="one-third column">
-      <img class="headshot u-max-full-width" src="http://placehold.it/150x150">
-      </div>
-      <div class="two-thirds column">
-      <h3>Speaker Name</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, voluptatibus. Fuga enim vitae illum ullam perferendis nam vero nostrum quaerat atque suscipit ratione facere magnam, sapiente accusantium beatae omnis, quod!</p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="six columns offset-by-six right-speakers">
-        <div class="one-third column">
-       <img class="headshot u-max-full-width" src="http://placehold.it/150x150">
-       </div>
-       <div class="two-thirds column">
-       <h3>Speaker Name</h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, voluptatibus. Fuga enim vitae illum ullam perferendis nam vero nostrum quaerat atque suscipit ratione facere magnam, sapiente accusantium beatae omnis, quod!</p>
-       </div>
-       
-    </div>
   
-  </div>
+  <% @speakers.each do |speaker| %>
+    <% if speaker.id % 2 == 0 %>
 
-  <div class="row">
+      <div class="row">
 
-    <div class="six columns left-speakers">
-      <div class="one-third column">
-      <img class="headshot u-max-full-width" src="http://placehold.it/150x150">
+        <div class="seven columns">
+          <div class="one-third column">
+          <img class="headshot u-max-full-width" src=<%= speaker.image_url %>>
+          <h4><%= speaker.name %></h4>
+          </div>
+          <div class="two-thirds column">
+          <p class="description"><%= speaker.description %></p>
+          <p class="talk"><%= speaker.talk %></p>
+          </div>
+        </div>
       </div>
-      <div class="two-thirds column">
-      <h3>Speaker Name</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, voluptatibus. Fuga enim vitae illum ullam perferendis nam vero nostrum quaerat atque suscipit ratione facere magnam, sapiente accusantium beatae omnis, quod!</p>
+
+    <% else %>
+
+      <div class="row">
+
+        <div class="seven columns offset-by-five">
+            <div class="one-third column">
+            <img class="headshot u-max-full-width" src=<%= speaker.image_url %>>
+            <h4><%= speaker.name %></h4>
+            </div>
+            <div class="two-thirds column">
+            <p class="description"><%= speaker.description %></p>
+            <p class="talk"><%= speaker.talk %></p>
+           </div>
+           
+        </div>
+      
       </div>
-    </div>
 
-  </div>
-
-  <div class="row">
-
-    <div class="six columns offset-by-six right-speakers">
-        <div class="one-third column">
-       <img class="headshot u-max-full-width" src="http://placehold.it/150x150">
-       </div>
-       <div class="two-thirds column">
-       <h3>Speaker Name</h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum possimus, quam, mollitia facilis odit molestiae ea accusantium soluta vero cum reprehenderit tempora modi excepturi quas at voluptatibus neque dicta praesentium.</p>
-       </div>
-    </div>
-  
-  </div>
-  
-  <div class="row">
-
-    <div class="six columns left-speakers">
-      <div class="one-third column">
-      <img class="headshot u-max-full-width" src="http://placehold.it/150x150">
-      </div>
-      <div class="two-thirds column">
-      <h3>Speaker Name</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, voluptatibus. Fuga enim vitae illum ullam perferendis nam vero nostrum quaerat atque suscipit ratione facere magnam, sapiente accusantium beatae omnis, quod!</p>
-      </div>
-    </div>
-
-  </div>
-
-
+    <% end %>
+  <% end %>
 </div>
