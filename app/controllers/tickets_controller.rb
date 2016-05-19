@@ -3,6 +3,7 @@ require 'stripe'
 class TicketsController < ApplicationController
 
   def index
+    @sponsors = Sponsor.all
   end
 
   def tickets
