@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160519061813) do
     t.integer  "amount"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "ref_id"
   end
 
   create_table "tickets", force: :cascade do |t|
