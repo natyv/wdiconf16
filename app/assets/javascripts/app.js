@@ -27,13 +27,3 @@ function stripeResponseHandler(status, response) {
     $form.get(0).submit();
   }
 };
-
-// {
-//   id: "tok_u5dg20Gra", // Token identifier
-//   card: {...}, // Dictionary of the card used to create the token
-//   created: 1463550259, // Timestamp of when token was created
-//   currency: "usd", // Currency that the token was created in
-//   livemode: false, // Whether this token was created with a live API key
-//   object: "token", // Type of object, always "token"
-//   used: false // Whether this token has been used
-// }
