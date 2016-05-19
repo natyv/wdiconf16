@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   post '/tickets/submit' => 'tickets#submit'
 
   get '/sponsors' => 'sponsors#sponsors'
+  post '/sponsors/submit' => 'sponsors#submit'
 
 end
