@@ -1,9 +1,10 @@
 require 'stripe'
 
 class TicketsController < ApplicationController
-
+  helper_method :sort_column, :sort_direction
   def index
-    @sponsors = Sponsor.all
+    @sponsors = Sponsor.order("#{sort_column} #{sort_direction}")
+    # @sponsors = Sponsor.all
   end
 
   def tickets
@@ -32,5 +33,19 @@ class TicketsController < ApplicationController
       # The card has been declined
     end
   end
+
+
+  private
+    def sortable_columns
+      [ "amount"]
+    end
+
+    def sort_column
+      sortable_columns.include?(params[:column]) ? params[:column] : "amount"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+    end
 
 end
