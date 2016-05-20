@@ -19,6 +19,7 @@ class TicketsController < ApplicationController
     # create charge in ticket model
     new_ticket.my_save(params[:stripeToken])
     # get response from strip API.
+    flash[:notice] = "Thanks for buying a Ticket to WDI Conf!! "
     redirect_to '/'
   end
 
