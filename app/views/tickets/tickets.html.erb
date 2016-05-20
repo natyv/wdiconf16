@@ -1,4 +1,4 @@
-<h1>Buy a ticket for WDI6 Conf.</h1>
+<h1>Buy a ticket for WDI6 Conf</h1>
 
 <h3>Total: $<span id="amount">50</span></h3>
 
@@ -6,9 +6,9 @@
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <h2>Your information</h2>
     <label for="">First name</label>
-    <input type="text" name="firstname" value="">
+    <input type="text" name="firstname" value="" minlength=2>
     <label for="">Last name</label>
-    <input type="text" name="lastname" value="">
+    <input type="text" name="lastname" value="" minlength=2>
     <label for="">Email</label>
     <input type="email" name="email" value="">
 
