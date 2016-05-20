@@ -16,13 +16,17 @@
   <link href='//fonts.googleapis.com/css?family=Martel:400,200,700' rel='stylesheet' type='text/css'>
 
   <!-- CSS -->
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  
+
    <!-- CSS -->
+   <% if request.path == '/tickets' || request.path == 'tickets/submit' %>
+   <%= javascript_include_tag 'payment', 'data-turbolinks-track' => true %>
+  <% else %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
