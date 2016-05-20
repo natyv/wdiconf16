@@ -1,9 +1,22 @@
-.sponsors {
-  background-color: mistyrose;
+
+.top-sponsor {
+  img { 
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 300px;
+    height: auto;
+    opacity: 0.8;
+  }
 }
 
-img {
-  height: auto;
-  width: 200px;
-  opacity: 0.5;
+.second-row-sponsors {
+  img {
+    padding-top: 3%;
+    width: 200px;
+    height: auto;
+    opacity: 0.5;
+    display: inline-block;
+  }
 }
+
