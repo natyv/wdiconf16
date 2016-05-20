@@ -1,4 +1,5 @@
 require 'stripe'
+require 'pony'
 
 class TicketsController < ApplicationController
   helper_method :sort_column, :sort_direction
@@ -20,6 +21,23 @@ class TicketsController < ApplicationController
     new_ticket.my_save(params[:stripeToken])
     # get response from strip API.
     flash[:notice] = "Thanks for buying a Ticket to WDI Conf!! "
+    # sending conformation email
+    Pony.mail({
+  	:from => 'isha.negi19@gmail.com',
+    :to => "#{params[:email]}",
+    :subject => "Ticket Confirmation from WDIConf 2016",
+    :body => "Dear #{params[:firstname]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{params[:stripeToken]}. Regards, WDI.",
+    :via => :smtp,
+    :via_options => {
+      :address              => 'smtp.gmail.com',
+      :port                 => '587',
+      :enable_starttls_auto => true,
+      :user_name            => 'johnmann778@gmail.com',
+      :password             => 'password18*',
+      :authentication       => :plain,
+      :domain               => "localhost.localdomain"
+     }
+    })
     redirect_to '/'
   end
 
