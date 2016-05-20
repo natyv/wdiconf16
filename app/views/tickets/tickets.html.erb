@@ -1,5 +1,4 @@
 <h1>Buy a ticket for WDI6 Conf.</h1>
-
 <h3>Total: $<span id="amount">50</span></h3>
 
 <form action="/tickets/submit" method="post" id="payment-form">
@@ -11,6 +10,13 @@
     <input type="text" name="lastname" value="">
     <label for="">Email</label>
     <input type="email" name="email" value="">
+
+    <!-- modal -->
+<div id="processing-notice" class="modal">
+  <div class="modal-content">
+    <p>Please Wait while we are processing you details ...</p>
+  </div>
+</div>
 
   <h2>Payment information</h2>
 
