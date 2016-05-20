@@ -2,10 +2,20 @@
   background-color: lightblue;
 }
 
-.left-speakers {
-  background-color: purple; 
+.headshot {
+  border-radius: 50%;
 }
 
-.right-speakers {
-  background-color: yellow;
+.speakers {
+  h4 {
+    text-align: center;
+  }
+}
+
+.talk {
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 12%;
 }

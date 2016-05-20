@@ -1,11 +1,14 @@
   <!-- hero-container is for the entire hero section -->
-
+<div class= "notice">
+    <% if flash[:notice] %>
+    <%= flash[:notice] %>
+    <% end %>
+</div>
 <div class="hero-container">
 <div class="progress-wrapper">
 <div class="progressbar">
     <div class="stylization"></div>
   </div>
- 
 </div>
 
     <div id="hero-conf-info-container">

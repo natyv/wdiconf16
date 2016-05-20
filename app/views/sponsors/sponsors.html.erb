@@ -1,16 +1,22 @@
-<h1>Buy a ticket for WDI6 Conf.</h1>
+<h1>Sponsor the Amazing WDI Conf 2016</h1>
 
-<h3>Total: $<span id="amount">50</span></h3>
 
-<form action="/tickets/submit" method="post" id="payment-form">
+<form action="/sponsors/submit" method="post" id="payment-form">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="">Total Amount: $</label>
+    <input type="text" name="amount">
+
   <h2>Your information</h2>
+    <label for="">Company name</label>
+    <input type="text" name="company_name" value="">
     <label for="">First name</label>
-    <input type="text" name="firstname" value="">
+    <input type="text" name="first_name" value="">
     <label for="">Last name</label>
-    <input type="text" name="lastname" value="">
+    <input type="text" name="last_name" value="">
     <label for="">Email</label>
-    <input type="email" name="email" value="">
+    <input type="text" name="email" value="">
+    <label for="">Image URL</label>
+    <input type="text" name="image_url" value="">
 
   <h2>Payment information</h2>
 
