@@ -3,10 +3,7 @@ require 'stripe'
 class TicketsController < ApplicationController
 
   def index
-    @donation {
-      width: 0;
-      current: 1;
-    }
+
   end
 
   def tickets
