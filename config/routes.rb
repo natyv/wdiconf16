@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/sponsors' => 'sponsors#sponsors'
   post '/sponsors/submit' => 'sponsors#submit'
 
+  post   '/signin'   => 'sessions#create'
+  delete '/signout'  => 'sessions#destroy'
+
 end
