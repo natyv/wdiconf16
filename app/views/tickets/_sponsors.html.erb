@@ -1,9 +1,13 @@
-<div class = "sponsors">
+<div class = "sponsors container">
 
+  <% @sponsors.each do |sponsor| %>
 
-
-<% @sponsors.each do |sponsor| %>
-<img src="<%= sponsor.image_url %>" alt="">
-<% end %>
+    <div class="row">
+      <div class="two columns offset-by-<%= ['one','three','five', 'seven'].sample %>">
+        <img src="<%= sponsor.image_url %>" alt="">
+      </div>
+    </div>
+  
+  <% end %>
 
 </div>
