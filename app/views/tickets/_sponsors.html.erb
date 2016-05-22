@@ -1,13 +1,19 @@
-<div class = "sponsors container">
-  <h3>With thanks to our generous sponsors...</h3>
+<div class = "container sponsors">
+  <h2>With thanks to our generous sponsors...</h2>
 
   <div class="row top-sponsor"> 
-    <img src="<%= sponsors_logo_url(url: @sponsors[0].image_url) %>">
+    <a href="<%= @sponsors[0].website %>"><img src="<%= sponsors_logo_url(url: @sponsors[0].image_url, size: 'large') %>"></a>
   </div>
 
   <div class="second-row-sponsors">
     <% @sponsors[1..3].each do |sponsor| %>
-       <img src="<%=  sponsors_logo_url(url: sponsor.image_url) %>" alt="<%= sponsor.company_name %>">
+       <a href="<%= sponsor.website %>"><img src="<%=  sponsors_logo_url(url: sponsor.image_url, size: 'medium') %>" alt="<%= sponsor.company_name %>"></a>
+    <% end %>
+  </div>
+
+  <div class ="other-sponsors">
+    <% @sponsors[4..@sponsors.length].each do |sponsor| %>
+      <a href="<%= sponsor.website %>"><img src="<%=  sponsors_logo_url(url: sponsor.image_url, size: 'small') %>" alt="<%= sponsor.company_name %>"></a>
     <% end %>
   </div>
 

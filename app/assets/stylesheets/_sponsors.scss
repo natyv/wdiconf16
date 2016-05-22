@@ -1,20 +1,27 @@
+.sponsors { 
+  h2 {
+   margin-top: 15%; 
+  } 
+}
+
 
 .top-sponsor {
   img { 
     display: block;
     margin: 0 auto;
-    margin-top: 10%;
-    width: 300px;
-    height: auto;
   }
 }
 
 .second-row-sponsors {
   img {
-    padding-top: 3%;
-    width: 200px;
-    height: auto;
-    
+    padding: 3%;
+    display: inline-block;
+  }
+}
+
+.other-sponsors {
+  img {
+    padding: 3%;
     display: inline-block;
   }
 }
