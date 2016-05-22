@@ -1,6 +1,16 @@
-.sponsors {
-  background-color: mistyrose;
+.sponsors-container {
+    position:relative;
+    top:0px;
+    width:100%;
+    height:520px;
+    // background-color:#402238;
+    // z-index:100;
+    text-align: center;
 
+}
+
+.top-offset {
+  padding-top: 250px;
 }
 
 img {

@@ -1,23 +1,144 @@
-body {
-  background: #EAD1CE;
+hr {
+  height: 31px;
+  background: white;
+  // border: none;
+  outline: none;
+  // margin-top: 3em 3em 5em;
+  position: relative;
+  border-top: 3px solid #E1E1E1;
+}
+hr:before {
+  content: attr(data-symbol);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: #F26A62;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  padding: 0.5em 3em;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
+hr#four:before {
+  border: 3px solid white;
 }
 
 
+
+body {
+  background: #402238
+
+;
+
+}
+
+// .colly1 {
+//   background-color: red;
+// }
+
+// .colly2 {
+//   background-color: yellow;
+// }
+
+// .colly3 {
+//   background-color: blue;
+// }
+
+.border {
+
+  border: 3px solid #fff;
+
+}
+
+// PROGRESS BAR -------------------------------------------------->
+
+.progress-wrapper {
+  position: relative;
+  margin-top: 120px;
+}
+
+// PROGRESS BAR END ---------------------------->
+
+// Buy Buttons ---------------------------->
+
+
+.buy-buttons {
+  margin-top: 55px;
+  margin-bottom: 10px;
+}
+
+// Buy Buttons ---------------------------->
+
+
+/* General button style (reset) */
+.btn {
+  border: none;
+  font-family: Roboto;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 15px 50px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+/* Button 1 */
+.btn-1 {
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+/* Button 1a */
+.btn-1a:hover,
+.btn-1a:active {
+  color: #FFFFFF;
+  background: #F26A62;
+  text-decoration: none;
+}
+
+/* END General button style (reset) */
+
+/* HERO CIRCLE */
+
 .hero-circle {
   margin: auto;
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   border-radius: 100%;
-  background: #1B1421;
+  background: #F26A62;
   // margin-top: 350px;
-  position: inline-block
+  position: inline-block;
+
 }
 
  .hero-circle h1 {
   color: #FFFFFF;
-  font-size: 5em;
-  padding: 50px;
+  font-size: 6.5em;
+  padding: 20px;
+  font-family: 'Permanent Marker', cursive;
 
 }
 
@@ -25,10 +146,15 @@ body {
     position:relative;
     top:0px;
     width:100%;
-    height:520px;
-    background-color:#EAD1CE;
+    height:480px;
+    background-color:#402238;
     z-index:100;
     text-align: center;
+    color: white;
+}
+
+.hero-conf {
+  margin-top: 80px;
 
 }
 
@@ -39,127 +165,149 @@ body {
     height: 20px;
     line-height: 20px;
     display: inline-block;
-
-}
-#hero-conf-info-container {
-    text-align: center;
-    height: 340px;
-    margin-top: 300px;
-    width: 80%;
-    margin-right: auto; 
-    margin-left: auto; 
-    // background-color: pink;
     position: relative;
-    height: 340px;
-    display: inline-block;
+
 }
 
-#hero-conf-info-list { 
-    text-align: center; 
-}
-#hero-conf-info-list li {
-    list-style: none; 
-    display: inline-block; /*want this to change to block when screen gets smaller */
-    vertical-align: middle; 
-    text-transform: uppercase; 
-    padding: 9px 18px 9px; 
-    color: white;
+.wdi-conf-info-text {
+  padding-top: 120px;
+  padding-bottom: 20px;
+  font-family: "PoemScript"; 
 }
 
-// PROGRESS BAR -------------------------------------------------->
+.wdi-conf-text {
+  padding-top: 60px;
+  font-family: 'PoemScript', serif; 
+}
 
-.progress-wrapper {
-  position: relative;
-  margin-top: 80px;
-  background: #e7f0f7;
+
+
+
+
+
+
+
+
+
+
+
+.button-emoj {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
-.progressbar {
-  display: block;
-  position: absolute;
-  z-index: 9;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 400px;
-  height: 30px;
+.button-emoj svg {
+  height: 64px;
+  width: 64px;
+  overflow: visible;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
-.progressbar::before,
-.progressbar::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background-image: -webkit-linear-gradient(0deg, #e91e63 0%, #e91e63 20%, #03a9f4 20%, #03a9f4 40%, #8bc34a 40%, #8bc34a 60%, #ffeb3b 60%, #ffeb3b 80%, #ff5722 80%, #ff5722 100%);
-  background-image: linear-gradient(90deg, #e91e63 0%, #e91e63 20%, #03a9f4 20%, #03a9f4 40%, #8bc34a 40%, #8bc34a 60%, #ffeb3b 60%, #ffeb3b 80%, #ff5722 80%, #ff5722 100%);
-  background-position: 0 0;
-  background-repeat: repeat-x;
-  -webkit-animation: movebar 5s linear infinite;
-          animation: movebar 5s linear infinite;
+.button-emoj .eyes #eye-right,
+.button-emoj .eyes #eye-left {
+  -webkit-animation: heartbeat 2s ease infinite;
+          animation: heartbeat 2s ease infinite;
 }
-.progressbar::before {
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+.button-emoj .eyes #eye-right {
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-animation-delay: .15s;
+          animation-delay: .15s;
+  -webkit-animation-duration: 2.25s;
+          animation-duration: 2.25s;
 }
-.progressbar::after {
-  z-index: 9;
-  top: 6px;
-  -webkit-filter: blur(16px);
-          filter: blur(16px);
-  opacity: 0.7;
+.button-emoj .eyes #eye-left {
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
 }
-.stylization {
-  position: absolute;
-  z-index: 999;
-  height: 4px;
-  width: 90%;
-  left: 5%;
-  top: 6px;
-  opacity: 0.3;
+.button-emoj:hover .eyes #eye-right {
+  -webkit-animation: hearts-large .35s ease infinite;
+          animation: hearts-large .35s ease infinite;
 }
-.stylization::before,
-.stylization::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 4px;
-  top: 0;
-  border-radius: 2px;
+.button-emoj:hover .eyes #eye-left {
+  -webkit-animation: hearts-large .4s ease infinite;
+          animation: hearts-large .4s ease infinite;
 }
-.stylization::before {
-  background: #fff;
-  left: 0;
-  right: 10px;
+
+@-webkit-keyframes hearts-large {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1) translateY(-5px);
+            transform: scale(1.1) translateY(-5px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
 }
-.stylization::after {
-  width: 6px;
-  background: #fff;
-  right: 0;
+
+@keyframes hearts-large {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1) translateY(-5px);
+            transform: scale(1.1) translateY(-5px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
 }
-@-webkit-keyframes movebar {
+@-webkit-keyframes heartbeat {
   from {
-    background-position: 0 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  15% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
-    background-position: 400px 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
-@keyframes movebar {
+@keyframes heartbeat {
   from {
-    background-position: 0 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  15% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
-    background-position: 400px 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
-
-// PROGRESS BAR END ---------------------------->
-
-
-
-
