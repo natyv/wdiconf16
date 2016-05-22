@@ -158,13 +158,23 @@ body {
 
 }
 
-.hero-conf-info{  
+.hero-conf-info{
     width: 100%;
     list-style: none;
     text-align: center;
     height: 20px;
     line-height: 20px;
     display: inline-block;
+}
+
+#hero-conf-info-container {
+    text-align: center;
+    height: 340px;
+    margin-top: 300px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    // background-color: pink;
     position: relative;
 
 }
@@ -172,12 +182,21 @@ body {
 .wdi-conf-info-text {
   padding-top: 120px;
   padding-bottom: 20px;
-  font-family: "PoemScript"; 
 }
 
 .wdi-conf-text {
   padding-top: 60px;
-  font-family: 'PoemScript', serif; 
+#hero-conf-info-list {
+    text-align: center;
+}
+#hero-conf-info-list li {
+    list-style: none;
+    display: inline-block; /*want this to change to block when screen gets smaller */
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: 9px 18px 9px;
+    color: white;
+
 }
 
 
@@ -311,3 +330,8 @@ body {
             transform: scale(1);
   }
 }
+<<<<<<< HEAD
+=======
+
+// PROGRESS BAR END ---------------------------->
+>>>>>>> 9b308adbc894e46fa9232899830b65de442304be
