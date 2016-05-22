@@ -3,7 +3,24 @@
 }
 
 .event-photo {
+  background-color: darksalmon;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
+  height: 350px;
+}
+
+#event-one {
+  background-image: url(https://images.unsplash.com/photo-1422748733255-ee572fddeab0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=9f751bda5ebdff13b3edd896a5ae3d86);
+}
+
+#event-two {
+  background-image: url(https://caspar.green/wp-content/uploads/2016/04/open-source.png);
+}
+
+#event-three {
+  background-image: url(https://images.unsplash.com/photo-1421986527537-888d998adb74?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=432792baab1a121c60e95ac61a8f5d68);
 }
 
 .bolded {

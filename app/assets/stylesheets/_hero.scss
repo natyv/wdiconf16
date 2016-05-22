@@ -3,7 +3,6 @@ body {
 
 }
 
-
 .hero-circle {
   margin: auto;
   height: 300px;
@@ -11,13 +10,14 @@ body {
   border-radius: 100%;
   background: #1B1421;
   // margin-top: 350px;
-  position: inline-block
+  position: inline-block;
 }
 
  .hero-circle h1 {
   color: #FFFFFF;
   font-size: 5em;
   padding: 50px;
+  font-family: 'Permanent Marker', cursive;
 
 }
 
@@ -32,7 +32,7 @@ body {
 
 }
 
-.hero-conf-info{  
+.hero-conf-info{
     width: 100%;
     list-style: none;
     text-align: center;
@@ -46,23 +46,23 @@ body {
     height: 340px;
     margin-top: 300px;
     width: 80%;
-    margin-right: auto; 
-    margin-left: auto; 
+    margin-right: auto;
+    margin-left: auto;
     // background-color: pink;
     position: relative;
     height: 340px;
     display: inline-block;
 }
 
-#hero-conf-info-list { 
-    text-align: center; 
+#hero-conf-info-list {
+    text-align: center;
 }
 #hero-conf-info-list li {
-    list-style: none; 
+    list-style: none;
     display: inline-block; /*want this to change to block when screen gets smaller */
-    vertical-align: middle; 
-    text-transform: uppercase; 
-    padding: 9px 18px 9px; 
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: 9px 18px 9px;
     color: white;
 }
 
@@ -159,7 +159,3 @@ body {
 }
 
 // PROGRESS BAR END ---------------------------->
-
-
-
-
