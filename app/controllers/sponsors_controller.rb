@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class SponsorsController < ApplicationController
 
   def sponsors
@@ -28,7 +30,13 @@ class SponsorsController < ApplicationController
     rescue Stripe::CardError => e
       # The card has been declined
     end
-    
   end
+
+  def sponsor_logo
+    image_url = params[:url]
+    image = open(image_url) 
+    send_data Sponsor.convert_logo(image)
+  end
+
 
 end
