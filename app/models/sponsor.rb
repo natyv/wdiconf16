@@ -16,7 +16,7 @@ class Sponsor < ActiveRecord::Base
   def self.dimensions(size)
     case size
     when 'large'
-        '500x250'
+        '600x350'
     when 'medium'
         '300x150'
     when 'small'
