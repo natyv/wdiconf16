@@ -45,6 +45,5 @@ ActiveRecord::Schema.define(version: 20160523051459) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "num_of_tickets"
-  end
 
 end

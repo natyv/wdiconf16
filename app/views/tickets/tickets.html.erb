@@ -1,5 +1,5 @@
 <h1>Buy a ticket for WDI6 Conf.</h1>
-<h3>Total: $<span id="amount">50</span></h3>
+<h3>Total: $<span id="amount">200</span></h3>
 
 <form action="/tickets/submit" method="post" id="payment-form">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
@@ -48,7 +48,7 @@
       }
     });
     $("#num_of_tickets").change(function(){
-        $('#amount').html($(this).val()*50);
+        $('#amount').html($(this).val()*200);
     });
     Stripe.setPublishableKey('pk_test_r8NTA6dpseAgBXLp56mMQgGA');
 </script>
