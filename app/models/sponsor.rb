@@ -6,7 +6,7 @@ class Sponsor < ActiveRecord::Base
     image = image.change_geometry(dimensions(size)) { |cols,rows,img| img.resize!(cols,rows) }
     image.fuzz = '2%'
     image = image.transparent('white')
-    image = image.level(- Magick::QuantumRange * 0.25, Magick::QuantumRange * 1.6)
+    image = image.level(- Magick::QuantumRange * 0.15, Magick::QuantumRange * 1.6)
     image = image.quantize(65535,Magick::GRAYColorspace).contrast(true)
     image.to_blob { |img| img.format = 'png' }    
   end
