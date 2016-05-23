@@ -1,9 +1,0 @@
-
-<% if logged_in? %>
-  <form action="/logout" method ="post">
-    <input type="hidden" value="delete" name="_method">
-      <button>Sign Out</button>
-  </form>
-<% end %>
-
-<h2>Hello <%= current_user.id %></h2>

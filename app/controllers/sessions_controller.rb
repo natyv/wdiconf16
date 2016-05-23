@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:admin] = nil
+    session[:admin_id] = nil
     redirect_to '/'
   end
 
