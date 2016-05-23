@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/' => 'tickets#index'
 
   get '/tickets' => 'tickets#tickets'
@@ -7,7 +8,10 @@ Rails.application.routes.draw do
   get '/sponsors' => 'sponsors#sponsors'
   post '/sponsors/submit' => 'sponsors#submit'
 
-  post   '/signin'   => 'sessions#create'
-  delete '/signout'  => 'sessions#destroy'
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
 
 end
