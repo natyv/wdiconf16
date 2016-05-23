@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/sponsors' => 'sponsors#sponsors'
   post '/sponsors/submit' => 'sponsors#submit'
 
+  get '/sponsors/logo' => 'sponsors#sponsor_logo'
 end
