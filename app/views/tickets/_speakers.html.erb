@@ -1,5 +1,6 @@
-<div class="speakers container">
-  <h2>Speakers</h2>
+<div class="container">
+
+  <hr id="four" data-symbol="SPEAKERS">
   
   <% @speakers.each do |speaker| %>
     <% if speaker.id % 2 == 0 %>
@@ -8,7 +9,7 @@
 
         <div class="seven columns">
           <div class="one-third column">
-          <img class="headshot u-max-full-width" src=<%= speaker.image_url %>>
+          <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
           <h4><%= speaker.name %></h4>
           </div>
           <div class="two-thirds column">

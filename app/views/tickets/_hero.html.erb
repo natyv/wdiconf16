@@ -1,23 +1,45 @@
-  <!-- hero-container is for the entire hero section -->
+<!-- Payment Confirmation  -->
+
 <div class= "notice">
     <% if flash[:notice] %>
     <%= flash[:notice] %>
     <% end %>
 </div>
+
+<!-- END Payment Confirmation  -->
+
 <div class="hero-container">
-<div class="progress-wrapper">
-<div class="progressbar">
-    <div class="stylization"></div>
-  </div>
-</div>
 
-    <div id="hero-conf-info-container">
-<ul id='hero-conf-info-list' class="hero-conf-info">
-    <li><h2>MELBOURNE</h2></li>
-    <li><div class="hero-circle"><h1>WDI Conf</h1></div></li>
-    <li><h2>GENERAL ASS</h2></li>
-</ul>
-</div>
+<!-- Progress Bar   -->
+
+  <div class="progress-wrapper">
+
+
+ <div class="row">
+        <div class="colly1 offset-by-one column two columns">$200</div>
+        <div class="colly2 six columns"><div class="progress-bar-wrapper">
+  <div class="progress-bar" style="width: <%= @progress %>%"></div>
+</div></div>
+        <div class="colly3 two columns">Free</div>
+    </div>
+  </div>  
+
+<!-- END Progress Bar   -->
+
+<!-- BUY Buy Buttons   -->
+
+<div class="buy-buttons"><a class="btn btn-1 btn-1a" href="http://localhost:3000/tickets">Buy Ticket</a><a class="btn btn-1 btn-1a" href="http://localhost:3000/sponsors">Sponsor Conf</a></div>
+
+<!-- END Buy Buttons   -->
+
+<!-- WDI Conf Info Section   -->
+
+    <div class="row hero-conf hero-conf-info">
+        <div class="colly1 offset-by-one column three columns"><div class="wdi-conf-info-text"><h2>Melb</h2></div></div>
+        <div class="colly2 four columns"><div class="hero-circle"><div class="wdi-conf-text"><h1>WDI Conf</h1></div></div></div>
+        <div class="colly3 three columns"><div class="wdi-conf-info-text"><h2>General</h2></div></div>
+    </div>
+
+<!-- END WDI Conf Info Section   -->
 
 </div>
-<!-- </div> -->
