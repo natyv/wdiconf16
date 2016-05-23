@@ -1,6 +1,16 @@
-
-
 // PROGRESS BAR -------------------------------------------------->
+
+.progress-bar-wrapper {
+  background-color: #CCC;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #F26A62;
+  height: 20px;
+}
+
 
 .progress-wrapper {
   position: relative;
@@ -10,7 +20,6 @@
 // PROGRESS BAR END ---------------------------->
 
 // Buy Buttons ---------------------------->
-
 
 .buy-buttons {
   margin-top: 55px;
@@ -98,11 +107,3 @@
     padding: 9px 18px 9px;
     color: white;
 }
-
-
-
-
-
-
-
-

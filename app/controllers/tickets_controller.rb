@@ -6,6 +6,14 @@ class TicketsController < ApplicationController
   
   def index
 
+    current_tix_price = 200; 
+    total_num_of_tix = 200;
+    sponsor_amount = 10000; #need to get from database
+    ticket_discount = (sponsor_amount / total_num_of_tix);
+    @progress_deci = (ticket_discount.to_f / current_tix_price);
+
+    @progress = (@progress_deci * 100);
+
     @sponsors = Sponsor.order("#{sort_column} #{sort_direction}")
     @speakers = Speaker.all
   end

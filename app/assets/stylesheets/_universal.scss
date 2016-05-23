@@ -1,3 +1,19 @@
+$feature-color: #F26A62;
+
+$light-color: #EAD1CE;
+
+$mid-color: #B97375;
+
+$dark-color: #402238;
+
+$darkest-color: #1B1421;
+
+
+#background-gradient {
+    background: linear-gradient(#EAD1CE, #B97375, #402238);
+}
+
+
 hr {
   height: 31px;
   background: white;
@@ -43,6 +59,8 @@ body {
 // .colly3 {
 //   background-color: blue;
 // }
+
+// For Images -------------->
 
 .border {
 
@@ -99,13 +117,7 @@ body {
 
 /* END General button style (reset) */
 
-
-
-
-
-
-
-
+// EMOJI --------------> 
 
 .button-emoj {
   text-decoration: none;
