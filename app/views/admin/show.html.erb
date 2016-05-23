@@ -1,6 +1,5 @@
-<%= session[:admin]["username"] %>
 
-<% if !session[:admin].nil? %>
+<% if !logged_in? %>
   <form action="/logout" method ="post">
     <input type="hidden" value="delete" name="_method">
       <button>Sign Out</button>
