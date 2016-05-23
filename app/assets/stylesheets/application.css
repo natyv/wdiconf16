@@ -12,6 +12,7 @@
  *
  *= require normalize
  *= require skeleton
+ *= require animate
  *= require base
  *= require_self
  */

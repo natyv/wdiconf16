@@ -5,7 +5,7 @@
   <% @speakers.each do |speaker| %>
     <% if speaker.id % 2 == 0 %>
     <div class='animatedParent'>
-      <div class="row animated bounceInDown">
+      <div class="row animated bounceInLeft">
 
         <div class="seven columns">
           <div class="one-third column">
@@ -22,7 +22,8 @@
 
     <% else %>
 
-      <div class="row">
+    <div class='animatedParent'>
+      <div class="row animated bounceInRight">
 
         <div class="seven columns offset-by-five">
             <div class="one-third column">
@@ -33,10 +34,10 @@
             <p class="description"><%= speaker.description %></p>
             <p class="talk"><%= speaker.talk %></p>
            </div>
-
         </div>
 
       </div>
+    </div>
 
     <% end %>
   <% end %>
