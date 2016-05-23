@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160523051459) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "ref_id"
+    t.string   "website"
   end
 
   create_table "tickets", force: :cascade do |t|
@@ -45,5 +46,6 @@ ActiveRecord::Schema.define(version: 20160523051459) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "num_of_tickets"
+  end
 
 end

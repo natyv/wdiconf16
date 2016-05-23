@@ -1,3 +1,4 @@
+
 .sponsors-container {
     position:relative;
     top:0px;
@@ -8,14 +9,16 @@
     text-align: center;
   }
 
+.sponsors { 
+  h2 {
+   margin-top: 15%; 
+  } 
+}
+
 .top-sponsor {
   img { 
     display: block;
     margin: 0 auto;
-    margin-top: 10%;
-    width: 300px;
-    height: auto;
-    opacity: 0.8;
   }
 }
 
@@ -30,10 +33,14 @@ img {
 
 .second-row-sponsors {
   img {
-    padding-top: 3%;
-    width: 200px;
-    height: auto;
-    opacity: 0.5;
+    padding: 3%;
+    display: inline-block;
+  }
+}
+
+.other-sponsors {
+  img {
+    padding: 3%;
     display: inline-block;
   }
 }
