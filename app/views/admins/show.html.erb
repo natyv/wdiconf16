@@ -6,11 +6,31 @@
       <button>Sign Out</button>
   </form>
   <h2>Hello <%= current_user.username %></h2>
+<div class="container">
+  <div class ="row">
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sponsors.each do |sponsor| %>
 
-  <% @sponsors.each do |sponsor| %>
-    <p><%= sponsor.company_name %></p>
-  <% end %>
-
+          <tr>
+            <td><%= sponsor.company_name %></td>
+            <td><%= sponsor.first_name %></td>
+            <td><%= sponsor.email %></td>
+            <td><%= sponsor.amount %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
   <% else %>
     <a href="/login">Login</a>
 <% end %>
