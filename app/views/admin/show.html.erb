@@ -1,0 +1,10 @@
+<%= session[:admin]["username"] %>
+
+<% if !session[:admin].nil? %>
+  <form action="/logout" method ="post">
+    <input type="hidden" value="delete" name="_method">
+      <button>Sign Out</button>
+  </form>
+<% end %>
+
+<h2>Hello DT</h2>

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/sponsors' => 'sponsors#sponsors'
   post '/sponsors/submit' => 'sponsors#submit'
 
+  get '/admin' => 'admins#show'
+
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
