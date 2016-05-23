@@ -1,3 +1,12 @@
+.sponsors-container {
+    position:relative;
+    top:0px;
+    width:100%;
+    height:520px;
+    background-color:#EAD1CE;
+    // z-index:100;
+    text-align: center;
+  }
 
 .top-sponsor {
   img { 
@@ -10,6 +19,15 @@
   }
 }
 
+.top-offset {
+  padding-top: 250px;
+}
+
+img {
+  height: auto;
+  width: 200px;
+}
+
 .second-row-sponsors {
   img {
     padding-top: 3%;
@@ -19,4 +37,3 @@
     display: inline-block;
   }
 }
-
