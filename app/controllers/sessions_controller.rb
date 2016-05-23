@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
 
   def create
     if !params['session']['username'].nil?
-      admin = Admin.find_by(username: params['session']['username'].downcase)
-      if admin && admin.authenticate(params['session']['password'])
+      @admin = Admin.find_by(username: params['session']['username'].downcase)
+      if @admin && @admin.authenticate(params['session']['password'])
         # Log the user in and redirect to the user's show page.
 
-        session[:admin] = admin
+        session[:admin_id] = @admin.id
         redirect_to '/admin'
       else
         # Create an error message.

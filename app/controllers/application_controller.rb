@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-    Admin.find_by(id: session[:id])
+    Admin.find_by(id: session[:admin_id])
   end
   helper_method :current_user
 
