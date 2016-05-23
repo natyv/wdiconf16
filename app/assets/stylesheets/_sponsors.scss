@@ -3,7 +3,6 @@
     position:relative;
     top:0px;
     width:100%;
-    // height:520px;
     background-color:#EAD1CE;
     // z-index:100;
     text-align: center;
@@ -26,21 +25,19 @@
   padding-top: 250px;
 }
 
-img {
-  height: auto;
-  width: 200px;
-}
+
 
 .second-row-sponsors {
   img {
-    padding: 3%;
+    vertical-align: middle;
     display: inline-block;
   }
 }
 
 .other-sponsors {
   img {
-    padding: 3%;
+    vertical-align: middle;
+    padding: 2%;
     display: inline-block;
   }
 }
