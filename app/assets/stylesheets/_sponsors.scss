@@ -10,8 +10,17 @@
   }
 
 .sponsors { 
-  h2 {
-   margin-top: 15%; 
+  margin-top: 8%;
+  p {
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 1.5em;
+  -webkit-transform: rotate(350deg);
+  -moz-transform: rotate(350deg);
+  -ms-transform: rotate(350deg);
+  -o-transform: rotate(350deg);
+  transform: rotate(350deg);
+  text-align: left;
+  margin-bottom: 0;
   } 
 }
 
