@@ -159,9 +159,14 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #FFFFFF; }
 a:hover {
-  color: #0FA0CE; }
+  color: #B97375; }
+
+a:before {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
 
 
 /* Buttons
@@ -375,10 +380,10 @@ form {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
+  margin-top: 5em;
+  margin-bottom: 5em;
   border-width: 0;
-  border-top: 1px solid #E1E1E1; }
+  border-top: 3px solid #FFFFFF; }
 
 
 /* Clearing
