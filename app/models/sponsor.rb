@@ -16,12 +16,20 @@ class Sponsor < ActiveRecord::Base
   def self.dimensions(size)
     case size
     when 'large'
-        '550x350'
+        '500x250'
     when 'medium'
         '300x150'
     when 'small'
         '150x80'
     end
+  end
+
+  def self.total_sponsorship
+    amount = 0
+    Sponsor.all.each do |sponsor|
+      amount += sponsor.amount
+    end
+    amount
   end
 
 end
