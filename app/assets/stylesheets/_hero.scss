@@ -75,6 +75,20 @@
   }
 }
 
+#progress-percent {
+  display: none;
+}
+
+.o-progress-circle__number > p {
+  font-size: .7em;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.o-progress-circle__number > .sub-text {
+  font-size: .2em;
+}
+
 .header-info {
   position: relative;
   top: 30vh;
