@@ -8,19 +8,14 @@ class TicketsController < ApplicationController
     @sponsors = Sponsor.order("#{sort_column} #{sort_direction}")
     @speakers = Speaker.all
 
-    ticket_price = 200;
-    total_num_of_tix = 200;
+    ticket_price = 200
+    total_num_of_tix = 200
+    total_sponsor_amount = Sponsor.total_sponsorship
+    
+    ticket_discount = (total_sponsor_amount / total_num_of_tix)
+    progress_deci = (ticket_discount.to_f / ticket_price)
 
-    sponsorship_amount = 0
-    @sponsors.each do |sponsor|
-      sponsorship_amount += sponsor.amount
-    end
-
-    ticket_discount = (sponsorship_amount / total_num_of_tix);
-    @progress_deci = (ticket_discount.to_f / ticket_price);
-
-    @progress = (@progress_deci * 100);
-
+    @progress = (progress_deci * 100)
   end
 
   def tickets

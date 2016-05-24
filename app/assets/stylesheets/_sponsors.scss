@@ -3,15 +3,24 @@
     position:relative;
     top:0px;
     width:100%;
-   /* height:520px;*/
     background-color:#EAD1CE;
     // z-index:100;
     text-align: center;
   }
 
 .sponsors { 
-  h2 {
-   margin-top: 15%; 
+  margin-top: 8%;
+  p {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  color: #1B1421;
+  -webkit-transform: rotate(350deg);
+  -moz-transform: rotate(350deg);
+  -ms-transform: rotate(350deg);
+  -o-transform: rotate(350deg);
+  transform: rotate(350deg);
+  text-align: left;
+  margin-bottom: 0;
   } 
 }
 
@@ -27,7 +36,6 @@
 }
 
 
-
 .second-row-sponsors {
   img {
     vertical-align: middle;
@@ -40,5 +48,6 @@
     vertical-align: middle;
     padding: 2%;
     display: inline-block;
+    margin-bottom: 5%;
   }
 }
