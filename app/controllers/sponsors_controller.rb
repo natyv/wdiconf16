@@ -9,12 +9,16 @@ class SponsorsController < ApplicationController
     new_sponsor = Sponsor.new
     new_sponsor.amount = params[:amount]
     new_sponsor.company_name = params[:company_name]
-    new_sponsor.website = params[:website]
     new_sponsor.first_name = params[:first_name]
     new_sponsor.last_name = params[:last_name]
     new_sponsor.email = params[:email]
     new_sponsor.image_url = params[:image_url]
     new_sponsor.ref_id = params[:stripeToken]
+    if params[:website].include? "http" 
+      new_sponsor.website = params[:website]
+    else
+      new_sponsor.website = "http://#{params[:website]}"
+    end
     new_sponsor.save
 
     # process charge with stripe.
