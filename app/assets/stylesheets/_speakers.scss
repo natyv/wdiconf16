@@ -30,10 +30,6 @@
   animation: come-in 1s ease forwards;
 }
 
-.already-visible {
-  transform: translateX(0);
-  animation: none;
-}
 
 @keyframes come-in {
   to { transform: translateX(0); }
