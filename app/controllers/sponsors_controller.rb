@@ -15,7 +15,7 @@ class SponsorsController < ApplicationController
     new_sponsor.email = params[:email]
     new_sponsor.image_url = params[:image_url]
     new_sponsor.ref_id = params[:stripeToken]
-    new_sponsor.save
+    # new_sponsor.save
 
     # process charge with stripe.
     Stripe.api_key = "sk_test_OgmM5tL6FSzS7ULyDFIuUYbn"
@@ -41,13 +41,38 @@ class SponsorsController < ApplicationController
   })
     begin
       charge = Stripe::Charge.create(
-        :amount => params[:amount], # amount in cents, again
+        :amount => params[:amount].to_i * 100, # amount in cents, again
         :currency => "aud",
         :source => token,
         :description => "Sponsor amount"
       )
+      if charge
+        new_sponsor.save
+      end
     rescue Stripe::CardError => e
       # The card has been declined
+      render :err_show, status: :payment_required, json: @err
+      return
+    rescue Stripe::InvalidRequestError => e
+      @err = stripe_error(e, 'cancellation_invalid_request')
+      render :err_show, status: :payment_required, json: @err
+      return
+    rescue Stripe::AuthenticationError => e
+      @err = stripe_error(e, 'cancellation_authentication')
+      render :err_show, status: :payment_required, json: @err
+      return
+    rescue Stripe::APIConnectionError => e
+      @err = stripe_error(e, 'cancellation_api_connect')
+      render :err_show, status: :payment_required, json: @err
+      return
+    rescue Stripe::StripeError => e
+      @err = stripe_error(e, 'cancellation_generic error')
+      render :err_show, status: :payment_required, json: @err
+      return
+    rescue => e
+      @err = stripe_error(e, 'cancellation_something_else')
+      render :err_show, status: :payment_required, json: @err
+      return
     end
     redirect_to '/'
 

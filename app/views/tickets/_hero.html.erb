@@ -1,5 +1,4 @@
 <!-- Payment Confirmation  -->
-
 <div class= "notice">
     <% if flash[:notice] %>
     <%= flash[:notice] %>
@@ -7,39 +6,29 @@
 </div>
 
 <!-- END Payment Confirmation  -->
-
 <div class="hero-container">
-
-<!-- Progress Bar   -->
-
-  <div class="progress-wrapper">
-
-
- <div class="row">
-        <div class="colly1 offset-by-one column two columns">$200</div>
-        <div class="colly2 six columns"><div class="progress-bar-wrapper">
-  <div class="progress-bar" style="width: <%= @progress %>%"></div>
-</div></div>
-        <div class="colly3 two columns">Free</div>
+  <div class="container">
+    <div class="row">
+      <div class="one-half column chart-wrapper">
+        <!-- chart code -->
+          <div class="o-progress-circle o-progress-circle--rounded">
+            <div class="o-progress-circle__number">
+              <span data-pourcent><%= @progress %></span><em>%</em>
+            </div>
+            <div class="o-progress-circle__fill">
+              <svg class="icon" viewBox="0 0 40 40">
+                <circle r="15.9154943092" cy="20" cx="20" />
+                  <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="25" transform="rotate(-90,20,20)" />
+                </svg>
+            </div>
+          </div>
+        <!-- end of chart code -->
+      </div>
+      <div class="one-half column header-info">
+        <h1>WDI Conf.</h1>
+        <h2>Melbourne</h2>
+        <p>June 5th, 2016 | General Assembly</p>
+      </div>
     </div>
   </div>
-
-<!-- END Progress Bar   -->
-
-<!-- BUY Buy Buttons   -->
-
-<div class="buy-buttons"><a class="btn btn-1 btn-1a" href="http://localhost:3000/tickets">Buy Ticket</a><a class="btn btn-1 btn-1a" href="http://localhost:3000/sponsors">Sponsor Conf</a></div>
-
-<!-- END Buy Buttons   -->
-
-<!-- WDI Conf Info Section   -->
-
-    <div class="row hero-conf hero-conf-info">
-        <div class="colly1 offset-by-one column three columns"><div class="wdi-conf-info-text"><h2>Melb</h2></div></div>
-        <div class="colly2 four columns"><div class="hero-circle"><div class="wdi-conf-text"><h1>WDI Conf</h1></div></div></div>
-        <div class="colly3 three columns"><div class="wdi-conf-info-text"><h2>General</h2></div></div>
-    </div>
-
-<!-- END WDI Conf Info Section   -->
-
 </div>

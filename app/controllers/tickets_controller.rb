@@ -8,30 +8,27 @@ class TicketsController < ApplicationController
     @sponsors = Sponsor.order("#{sort_column} #{sort_direction}")
     @speakers = Speaker.all
 
-    ticket_price = 200;
-    total_num_of_tix = 200;
+    ticket_price = 200
+    total_num_of_tix = 200
+    total_sponsor_amount = Sponsor.total_sponsorship
 
-    sponsorship_amount = 0
-    @sponsors.each do |sponsor|
-      sponsorship_amount += sponsor.amount
-    end
+    ticket_discount = (total_sponsor_amount / total_num_of_tix)
+    progress_deci = (ticket_discount.to_f / ticket_price)
 
-    ticket_discount = (sponsorship_amount / total_num_of_tix);
-    @progress_deci = (ticket_discount.to_f / ticket_price);
-
-    @progress = (@progress_deci * 100);
-
+    @progress = (progress_deci * 100)
   end
 
   def tickets
   end
 
   def submit
+    # generates random number and removes the part before decimal
+    reference_id = rand(1.5..2.8).to_s.split(".")[1]
     new_ticket = Ticket.new
     new_ticket.first_name = params[:firstname]
     new_ticket.last_name = params[:lastname]
     new_ticket.email = params[:email]
-    new_ticket.ref_id = params[:stripeToken]
+    new_ticket.ref_id = reference_id
     new_ticket.num_of_tickets = params[:num_of_tickets]
     # create charge in ticket model
     new_ticket.my_save(params[:stripeToken])
@@ -42,7 +39,7 @@ class TicketsController < ApplicationController
   	:from => 'isha.negi19@gmail.com',
     :to => "#{params[:email]}",
     :subject => "Ticket Confirmation from WDIConf 2016",
-    :body => "Dear #{params[:firstname]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{params[:stripeToken]}. Regards, WDI.",
+    :body => "Dear #{params[:firstname]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{reference_id}. Regards, WDI.",
     :via => :smtp,
     :via_options => {
       :address              => 'smtp.gmail.com',

@@ -2,6 +2,7 @@
 
 function initMap() {
   // style array
+
   var styles = [
     {
       stylers: [
@@ -29,12 +30,19 @@ function initMap() {
 
 // Create a map object, and include the MapTypeId to add
 // to the map type control.
+
+
 var mapOptions = {
-  zoom: 14,
-  center: new google.maps.LatLng(-37.8352978, 144.9887219),
+  zoom: 15,
+  center: new google.maps.LatLng(-37.8181067, 144.9570576),
   mapTypeControlOptions: {
     mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-  }
+  },
+    zoomControl: false,
+    disableDefaultUI: true,
+    scrollwheel: false,
+    disableDoubleClickZoom: true
+
 };
 var map = new google.maps.Map(document.getElementById('map'),
   mapOptions);
@@ -42,4 +50,13 @@ var map = new google.maps.Map(document.getElementById('map'),
 //Associate the styled map with the MapTypeId and set it to display.
 map.mapTypes.set('map_style', styledMap);
 map.setMapTypeId('map_style');
+
+var myLatLng = {lat: -37.8181067, lng: 144.9570576};
+var image = "https://pbs.twimg.com/profile_images/658945176941891584/NsDfkqMx_normal.png"
+var marker = new google.maps.Marker({
+  position: myLatLng,
+  map: map,
+  title: 'General Assembly: 12A, 45 William Street, Melbourne 3000',
+  icon: image
+});
 }
