@@ -32,6 +32,7 @@ class TicketsController < ApplicationController
     new_ticket.last_name = params[:lastname]
     new_ticket.email = params[:email]
     new_ticket.ref_id = params[:stripeToken]
+    new_ticket.num_of_tickets = params[:num_of_tickets]
     # create charge in ticket model
     new_ticket.my_save(params[:stripeToken])
     # get response from strip API.
