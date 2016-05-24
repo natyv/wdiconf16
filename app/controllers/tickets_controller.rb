@@ -27,11 +27,13 @@ class TicketsController < ApplicationController
   end
 
   def submit
+    # generates random number and removes the part before decimal
+    reference_id = rand(1.5..2.8).to_s.split(".")[1]
     new_ticket = Ticket.new
     new_ticket.first_name = params[:firstname]
     new_ticket.last_name = params[:lastname]
     new_ticket.email = params[:email]
-    new_ticket.ref_id = params[:stripeToken]
+    new_ticket.ref_id = reference_id
     new_ticket.num_of_tickets = params[:num_of_tickets]
     # create charge in ticket model
     new_ticket.my_save(params[:stripeToken])
@@ -42,7 +44,7 @@ class TicketsController < ApplicationController
   	:from => 'isha.negi19@gmail.com',
     :to => "#{params[:email]}",
     :subject => "Ticket Confirmation from WDIConf 2016",
-    :body => "Dear #{params[:firstname]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{params[:stripeToken]}. Regards, WDI.",
+    :body => "Dear #{params[:firstname]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{reference_id}. Regards, WDI.",
     :via => :smtp,
     :via_options => {
       :address              => 'smtp.gmail.com',
