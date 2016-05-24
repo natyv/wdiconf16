@@ -12,12 +12,14 @@ $(document).ready(function() {
   $('#event1').addClass('selected-event');
   $('#event-description').html('<h3>Keynote: contributing to open source as a junior</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>');
 
-  $('#timetable').on('click', 'tr', function() {
+  $('#timetable').on('click mouseover', '.event', function() {
     $('tr').removeClass('selected-event');
     $(this).addClass('selected-event');
-    $('#event-description').html(descriptions[this.id]);
+    var event = this.id
+    $('#event-description').fadeOut('slow', function() {
+     $('#event-description').html(descriptions[event]).fadeIn('slow'); 
+    });
   });
-
 });
 
 
