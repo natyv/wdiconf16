@@ -1,12 +1,11 @@
-<div class="container">
+<div class="speakers-container">
+  <div class="container">
 
   <hr id="four" data-symbol="SPEAKERS">
-  
+
   <% @speakers.each do |speaker| %>
+
     <% if speaker.id % 2 == 0 %>
-
-      <div class="row">
-
         <div class="seven columns">
           <div class="one-third column">
           <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
@@ -17,26 +16,60 @@
           <p class="talk"><%= speaker.talk %></p>
           </div>
         </div>
-      </div>
 
     <% else %>
 
-      <div class="row">
-
         <div class="seven columns offset-by-five">
             <div class="one-third column">
-            <img class="headshot u-max-full-width" src=<%= speaker.image_url %>>
+            <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
             <h4><%= speaker.name %></h4>
             </div>
             <div class="two-thirds column">
             <p class="description"><%= speaker.description %></p>
             <p class="talk"><%= speaker.talk %></p>
            </div>
-           
         </div>
-      
-      </div>
 
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
+
 </div>
+<script type="text/javascript">
+// Transition animation for speakers
+    (function($) {
+       $.fn.visible = function(partial) {
+          var $t            = $(this),
+              $w            = $(window),
+              viewTop       = $w.scrollTop(),
+              viewBottom    = viewTop + $w.height(),
+              _top          = $t.offset().top,
+              _bottom       = _top + $t.height(),
+              compareTop    = partial === true ? _bottom : _top,
+              compareBottom = partial === true ? _top : _bottom;
+        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+      };
+    })(jQuery);
+
+    var win = $(window);
+    var allMods = $(".seven");
+
+    win.scroll(function(event) {
+      var i =1;
+      allMods.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+          if(i%2 == 0) {
+            el.addClass("come-in-right");
+            i++;
+          }
+          else {
+            el.addClass("come-in-left");
+            i++;
+          }
+        }
+      });
+
+    });
+
+</script>

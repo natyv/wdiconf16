@@ -21,22 +21,42 @@ class SponsorsController < ApplicationController
     Stripe.api_key = "sk_test_OgmM5tL6FSzS7ULyDFIuUYbn"
     token = params[:stripeToken]
     # Create the charge on Stripe's servers - this will charge the user's card
+    flash[:notice] = "Thanks for buying a Ticket to WDI Conf!! "
+    # sending conformation email
+    Pony.mail({
+  	:from => 'isha.negi19@gmail.com',
+    :to => "#{params[:email]}",
+    :subject => "Ticket Confirmation from WDIConf 2016",
+    :body => "Dear #{params[:first_name]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{params[:stripeToken]}. Regards, WDI.",
+    :via => :smtp,
+    :via_options => {
+      :address              => 'smtp.gmail.com',
+      :port                 => '587',
+      :enable_starttls_auto => true,
+      :user_name            => 'johnmann778@gmail.com',
+      :password             => 'password18*',
+      :authentication       => :plain,
+      :domain               => "localhost.localdomain"
+    }
+  })
     begin
       charge = Stripe::Charge.create(
         :amount => params[:amount], # amount in cents, again
         :currency => "aud",
         :source => token,
-        :description => "Ticket purchase"
+        :description => "Sponsor amount"
       )
     rescue Stripe::CardError => e
       # The card has been declined
     end
+    redirect_to '/'
+
   end
 
   def sponsor_logo
     image_url = params[:url]
     size = params[:size]
-    image = open(image_url) 
+    image = open(image_url)
     send_data Sponsor.convert_logo(image, size)
   end
 
