@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require app.js
 //= require jquery
+//= require app.js
 //= require jquery_ujs
 //= require turbolinks
 //= require payment.js
