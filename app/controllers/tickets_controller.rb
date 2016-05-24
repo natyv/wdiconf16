@@ -18,9 +18,6 @@ class TicketsController < ApplicationController
     @progress = (progress_deci * 100)
   end
 
-  def tickets
-  end
-
   def submit
     # generates random number and removes the part before decimal
     reference_id = rand(1.5..2.8).to_s.split(".")[1]
