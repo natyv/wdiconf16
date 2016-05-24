@@ -1,3 +1,6 @@
+.speakers-container {
+  padding-top: 1px;
+}
 
 .headshot {
   border-radius: 50%;
@@ -15,4 +18,23 @@
 
 .description {
   padding-top: 12%;
+}
+
+.come-in-left {
+  transform: translateX(-170px);
+  animation: come-in 1s ease forwards;
+}
+
+.come-in-right {
+  transform: translateX(170px);
+  animation: come-in 1s ease forwards;
+}
+
+.already-visible {
+  transform: translateX(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateX(0); }
 }
