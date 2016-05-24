@@ -6,6 +6,8 @@
       <button>Sign Out</button>
   </form>
   <h2>Hello <%= current_user.username %></h2>
+  <h3>Tickets Sold: <%=   Ticket.sum(:num_of_tickets) %>
+  </h3>
 <div class="container">
   <div class ="row">
     <table class="u-full-width">
