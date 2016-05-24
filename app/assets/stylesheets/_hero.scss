@@ -1,109 +1,81 @@
-// PROGRESS BAR -------------------------------------------------->
-
-.progress-bar-wrapper {
-  background-color: #CCC;
-  height: 20px;
-  width: 100%;
-}
-
-.progress-bar {
-  background-color: #F26A62;
-  height: 20px;
-}
-
-
-.progress-wrapper {
-  position: relative;
-  margin-top: 120px;
-}
-
-// PROGRESS BAR END ---------------------------->
-
-// Buy Buttons ---------------------------->
-
-.buy-buttons {
-  margin-top: 55px;
-  margin-bottom: 10px;
-}
-
-// End Buy Buttons ---------------------------->
-
-
-/* HERO CIRCLE */
-
-.hero-circle {
-  margin: auto;
-  height: 400px;
-  width: 400px;
-  border-radius: 100%;
-  background: #F26A62;
-  // margin-top: 350px;
-  position: inline-block;
-
-}
-
- .hero-circle h1 {
-  color: #FFFFFF;
-  font-size: 6.5em;
-  padding: 20px;
-  font-family: 'Permanent Marker', cursive;
-
-}
-
 .hero-container {
     position:relative;
-    top:0px;
     width:100%;
-    height:480px;
-    background-color:#402238;
-    z-index:100;
-    text-align: center;
+    height:600px;
+    background: -webkit-linear-gradient(left top, $dark-color, $darkest-color) no-repeat;
     color: white;
 }
 
-.hero-conf {
-  margin-top: 80px;
-
+.chart-wrapper {
+  top: 20vh;
+  position: relative;
 }
 
-.hero-conf-info{
-    width: 100%;
-    list-style: none;
-    text-align: center;
-    height: 20px;
-    line-height: 20px;
-    display: inline-block;
+.icon {
+  width: 100%;
+  height: 100%;
 }
 
-#hero-conf-info-container {
-    text-align: center;
-    height: 340px;
-    margin-top: 300px;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    // background-color: pink;
-    position: relative;
-
+.o-progress-circle {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 400px;
 }
 
-.wdi-conf-info-text {
-  padding-top: 120px;
-  padding-bottom: 20px;
+.o-progress-circle__fill circle {
+  fill: none;
+  stroke-width: 2px;
+  stroke: $darkest-color;
+}
+.o-progress-circle__fill circle:nth-child(2) {
+  animation: load-circle 1s;
+  stroke: $feature-color;
+  stroke-dasharray: 100;
+}
+.o-progress-circle__number {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  margin: auto;
+  height: 10rem;
+  width: 100%;
+  color: rgba(255,255,255,0.5);
+  font-size: 10rem;
+  text-align: center;
+}
+.o-progress-circle__number em {
+  font-weight: 100;
+  font-style: normal;
+}
+.o-progress-circle--rounded circle:nth-child(2) {
+  stroke-linecap: round;
+}
+@-moz-keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+@-webkit-keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+@-o-keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes load-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
 }
 
-.wdi-conf-text {
-  padding-top: 60px;
-}
-
-#hero-conf-info-list {
-    text-align: center;
-}
-#hero-conf-info-list li {
-    list-style: none;
-    display: inline-block; /*want this to change to block when screen gets smaller */
-    vertical-align: middle;
-    text-transform: uppercase;
-    padding: 9px 18px 9px;
-    color: white;
+.header-info {
+  position: relative;
+  top: 30vh;
 }
