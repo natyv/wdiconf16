@@ -1,14 +1,25 @@
 <div class="speakers-container">
   <div class="container">
 
-    <hr id="four" data-symbol="SPEAKERS">
+  <hr id="four" data-symbol="SPEAKERS">
 
-    <% @speakers.each do |speaker| %>
-      <% if speaker.id % 2 == 0 %>
+  <% @speakers.each do |speaker| %>
 
-        <div class="row">
+    <% if speaker.id % 2 == 0 %>
+        <div class="seven columns">
+          <div class="one-third column">
+          <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
+          <h4><%= speaker.name %></h4>
+          </div>
+          <div class="two-thirds column">
+          <p class="description"><%= speaker.description %></p>
+          <p class="talk"><%= speaker.talk %></p>
+          </div>
+        </div>
 
-          <div class="seven columns">
+    <% else %>
+
+        <div class="seven columns offset-by-five">
             <div class="one-third column">
             <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
             <h4><%= speaker.name %></h4>
@@ -16,26 +27,7 @@
             <div class="two-thirds column">
             <p class="description"><%= speaker.description %></p>
             <p class="talk"><%= speaker.talk %></p>
-            </div>
-          </div>
-        </div>
-
-      <% else %>
-
-        <div class="row">
-
-          <div class="seven columns offset-by-five">
-              <div class="one-third column">
-              <img class="headshot u-max-full-width" src=<%= speaker.image_url %>>
-              <h4><%= speaker.name %></h4>
-              </div>
-              <div class="two-thirds column">
-              <p class="description"><%= speaker.description %></p>
-              <p class="talk"><%= speaker.talk %></p>
-             </div>
-
-          </div>
-
+           </div>
         </div>
 
       <% end %>

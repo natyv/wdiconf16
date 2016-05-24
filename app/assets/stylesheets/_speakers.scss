@@ -19,3 +19,18 @@
 .description {
   padding-top: 12%;
 }
+
+.come-in-left {
+  transform: translateX(-170px);
+  animation: come-in 1s ease forwards;
+}
+
+.come-in-right {
+  transform: translateX(170px);
+  animation: come-in 1s ease forwards;
+}
+
+
+@keyframes come-in {
+  to { transform: translateX(0); }
+}
