@@ -33,13 +33,16 @@ function initMap() {
 
 
 var mapOptions = {
-  zoom: 14,
+  zoom: 15,
   center: new google.maps.LatLng(-37.8181067, 144.9570576),
   mapTypeControlOptions: {
-    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style'],
+    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+  },
+    zoomControl: false,
+    disableDefaultUI: true,
     scrollwheel: false,
     disableDoubleClickZoom: true
-  }
+
 };
 var map = new google.maps.Map(document.getElementById('map'),
   mapOptions);
@@ -53,7 +56,7 @@ var image = "https://pbs.twimg.com/profile_images/658945176941891584/NsDfkqMx_no
 var marker = new google.maps.Marker({
   position: myLatLng,
   map: map,
-  title: 'General Assembly',
+  title: 'General Assembly: 12A, 45 William Street, Melbourne 3000',
   icon: image
 });
 }
