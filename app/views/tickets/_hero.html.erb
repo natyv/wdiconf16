@@ -13,7 +13,9 @@
         <!-- chart code -->
           <div class="o-progress-circle o-progress-circle--rounded">
             <div class="o-progress-circle__number">
-              <span id="progress-percent" data-percent><%= @progress %></span><p>$<%= @current_price %>*</p>
+              <span id="progress-percent" data-percent><%= @progress %></span>
+              <p>$<%= @current_price %>*</p>
+              <span class="sub-text">Current ticket price</span>
             </div>
             <div class="o-progress-circle__fill">
               <svg class="icon" viewBox="0 0 40 40">
