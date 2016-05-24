@@ -117,6 +117,76 @@ body {
 
 /* END General button style (reset) */
 
+
+//footer
+
+.footer {
+  color: #EAD1CE;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #281E30;
+  text-align: center;
+}
+
+//end footer
+
+
+// FORMS not 100% sure what this is doing but if you remove it the current forms have that horible grey border. need to work out which bits to keep here. 
+
+.signup {
+  float: left;
+  width: 500px;
+  padding: 30px 20px;
+  background-color: #EAD1CE;
+  text-align: center;
+  border-radius: 3px 3px 3px 3px;
+}
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 3px solid #B97375;
+  background-color: #EAD1CE;
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #281E30;
+}
+
+input textarea {
+  color: #B97375;
+}
+
+[type=submit] {
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+  background-color: #F26A62;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #F26A62;
+}
+
+
+// end form stuff
+
+
+
+
+
 // EMOJI --------------> 
 
 .button-emoj {
