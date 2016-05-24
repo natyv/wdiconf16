@@ -16,6 +16,8 @@ class TicketsController < ApplicationController
     progress_deci = (ticket_discount.to_f / ticket_price)
 
     @progress = (progress_deci * 100)
+    @current_price = ticket_price.to_f - ticket_discount.to_f
+
   end
 
   def submit

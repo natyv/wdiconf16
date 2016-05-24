@@ -79,6 +79,11 @@
   display: none;
 }
 
+.o-progress-circle__number > p {
+  font-size: .7em;
+  font-family: 'Roboto', sans-serif;
+}
+
 .header-info {
   position: relative;
   top: 30vh;
