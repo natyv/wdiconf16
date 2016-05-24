@@ -11,7 +11,7 @@ class TicketsController < ApplicationController
     ticket_price = 200
     total_num_of_tix = 200
     total_sponsor_amount = Sponsor.total_sponsorship
-    
+
     ticket_discount = (total_sponsor_amount / total_num_of_tix)
     progress_deci = (ticket_discount.to_f / ticket_price)
 
