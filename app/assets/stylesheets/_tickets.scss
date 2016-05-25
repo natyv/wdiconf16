@@ -2,14 +2,16 @@
   text-align: center;
 }
 
-#submit-payment-btn {
-  display: block;
-  margin: 10px auto;
+.tickets-container {
+  color: white;
 }
-
+          
 #processing-notice {
   display: none;
 }
+
+// Payment Confirmation Modal
+
 .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -27,4 +29,156 @@
     padding-top: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+.tickets-container{
+  background: #EAD1CE;
+  padding: 2em;
+  width: 75%;
+  min-width: 25em;
+  margin: 20px auto;
+  border: 3px solid #B97375;
+  box-shadow: 0 1em 0.5em rgba(0,0,0,0.2);
+  color: #222;
+  border-radius: 0.5em;
+}
+
+// Form Styling
+
+form *, *:before, *:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+form ul{
+  list-style-type: none;
+}
+
+form h3{
+  color: #FFFFFF;
+}
+
+form h4{
+  color: #FFFFFF;
+}
+
+form h3{
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+form h4{
+  line-height: 3.5em;
+}
+
+form li{
+  margin-bottom: .8em;
+  zoom: 1;
+}
+form li:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[type="checkbox"]{
+  width: auto;
+height: 100%;  
+}
+label{
+  float: left;
+  width: 90%;
+  font-size: .9em;
+  font-weight: bold;
+  color: #444;
+}
+
+select{
+  font-size: 0.6em;
+  width: 100%;
+  height: 4.1em;
+}
+
+.paymentInformation a{
+  text-decoration: none;
+}
+.paymentInformation a:hover{
+  color: #F26A62;
+}
+.subscriberAgreement a{
+  color: #B97375;
+}
+
+#acctFirstName {
+  color: #fff;
+}
+
+/* -- the grid -- */
+[class*="col-span"]{
+  float: left;
+  padding: 0 .4em;   
+}
+
+.col-span-33{
+  width: 33%;
+}
+.col-span-50{
+  width: 50%;
+}
+.col-span-66{
+  width: 66%;
+}
+.col-span-100{
+  width: 100%;
+}
+
+/* -- Helper Classes -- */
+.thickGrayDblBorder{ 
+  border: 3px solid #B97375;
+}
+
+.smallPrint{ 
+  font-size: .6em;
+  color: #666;
+}
+.smallPrint p{
+  margin-bottom: 1.5em;
+}
+
+.grayBg{
+  background: #F26A62;
+}
+
+.fauxTable {
+  display: table;
+  padding: .8em 1em .5em  1em;
+}
+
+.fauxTableCell.vertMiddle{
+   display: table-cell;
+   vertical-align: middle;
+}
+.fauxTableCell.horMiddle{
+  text-align: center;
+}
+
+.overRide-floatRight{
+  float: right !important;
+}
+
+.overRide-width85{
+  width: 85% !important;
+  
+}
+.overRide-width10{
+  width: 15% !important;
+}
+.overRide-noHeight{
+  height: auto !important;
+}
+
+.centerHor{
+  margin-left: auto;
+  margin-right: auto;
 }
