@@ -12,6 +12,7 @@
 //
 
 //= require jquery
+//= require app.js
 //= require jquery_ujs
 //= require progressbar.min.js
 //= require app.js
