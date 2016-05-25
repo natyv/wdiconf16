@@ -8,7 +8,7 @@ $(document).ready(function() {
     strokeWidth: 6,
     easing: 'easeInOut',
     duration: 1400,
-    color: '#FFEA82',
+    color: '#F26A62',
     trailColor: '#eee',
     trailWidth: 1,
     svgStyle: null
