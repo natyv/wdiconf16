@@ -4,17 +4,14 @@
 
 .tickets-container {
   color: white;
-
 }
-
-#submit-payment-btn {
-  display: block;
-  margin: 10px auto;
-}
-
+          
 #processing-notice {
   display: none;
 }
+
+// Payment Confirmation Modal
+
 .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -34,31 +31,6 @@
     width: 80%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*, *:before, *:after{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #402238;
-}
-
 .tickets-container{
   background: #EAD1CE;
   padding: 2em;
@@ -71,38 +43,45 @@ body {
   border-radius: 0.5em;
 }
 
-ul{
+// Form Styling
+
+form *, *:before, *:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+form ul{
   list-style-type: none;
 }
 
-h3, h4{
-  color: #B97375;
+form h3{
+  color: #FFFFFF;
 }
-h3{
+
+form h4{
+  color: #FFFFFF;
+}
+
+form h3{
   text-transform: uppercase;
   font-size: 1.4em;
   line-height: 2em;
 }
-h4{
+form h4{
   line-height: 3.5em;
 }
 
-li{
+form li{
   margin-bottom: .8em;
   zoom: 1;
 }
-li:after{
+form li:after{
   content: "";
   display: table;
   clear: both;
 }
 
-input{
-  border-bottom: 3px solid #B97375;
-  padding: .7em;
-  height: 3em;
-  width: 100%;
-}
 [type="checkbox"]{
   width: auto;
 height: 100%;  
@@ -121,19 +100,6 @@ select{
   height: 4.1em;
 }
 
-.btn{
-  font-size: 1em;
-  font-weight: bold;
-  background: #F26A62;
-  border-radius: .25em;
-  color: #fff;
-  width: 50%;
-  min-width: 12em;
-  max-width: 16em;
-  margin: 1em auto;
-  display: block;
-}
-
 .paymentInformation a{
   text-decoration: none;
 }
@@ -143,6 +109,11 @@ select{
 .subscriberAgreement a{
   color: #B97375;
 }
+
+#acctFirstName {
+  color: #fff;
+}
+
 /* -- the grid -- */
 [class*="col-span"]{
   float: left;
@@ -161,8 +132,6 @@ select{
 .col-span-100{
   width: 100%;
 }
-
-
 
 /* -- Helper Classes -- */
 .thickGrayDblBorder{ 
@@ -213,4 +182,3 @@ select{
   margin-left: auto;
   margin-right: auto;
 }
-

@@ -9,17 +9,20 @@ $dark-color: #402238;
 $darkest-color: #1B1421;
 
 
+body {
+  background: #402238;
+
+}
+
 #background-gradient {
     background: linear-gradient(#EAD1CE, #B97375, #402238);
 }
 
+// Divider line
 
 hr {
-  // height: 3px;
   background: white;
-  // border: none;
   outline: none;
-  // margin-top: 3em 3em 5em;
   position: relative;
   border-top: 3px solid #FFFFFF;
 }
@@ -41,25 +44,6 @@ hr#four:before {
   border: 3px solid white;
 }
 
-
-
-body {
-  background: #402238;
-
-}
-
-// .colly1 {
-//   background-color: red;
-// }
-
-// .colly2 {
-//   background-color: yellow;
-// }
-
-// .colly3 {
-//   background-color: blue;
-// }
-
 // For Images -------------->
 
 .border {
@@ -68,12 +52,10 @@ body {
 
 }
 
-/* General button style (reset) */
+/* Master Button Style */
 .btn {
-  border: none;
   font-family: Roboto;
   font-size: inherit;
-  color: inherit;
   background: none;
   cursor: pointer;
   padding: 15px 50px;
@@ -88,7 +70,8 @@ body {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   text-decoration: none;
-
+  border: 3px solid #fff;
+  color: #fff;
 }
 
 .btn:after {
@@ -100,79 +83,24 @@ body {
   transition: all 0.3s;
 }
 
-
-/* Button 1 */
-.btn-1 {
-  border: 3px solid #fff;
-  color: #fff;
-}
-
-/* Button 1a */
-.btn-1a:hover,
-.btn-1a:active {
+.btn:hover,
+.btn:active {
   color: #FFFFFF;
   background: #F26A62;
   text-decoration: none;
 }
 
-/* END General button style (reset) */
+/* END General button style  */
 
-
-//footer
-
-.footer {
-  color: #EAD1CE;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #281E30;
-  text-align: center;
-}
-
-//end footer
-
-
-// FORMS not 100% sure what this is doing but if you remove it the current forms have that horible grey border. need to work out which bits to keep here. 
-
-.signup {
-  float: left;
-  width: 500px;
-  padding: 30px 20px;
-  background-color: #EAD1CE;
-  text-align: center;
-  border-radius: 3px 3px 3px 3px;
-}
+/* FORMS */
 
 [type=text] {
   display: block;
   margin: 0 auto;
   width: 80%;
-  border: 0;
-  border-bottom: 3px solid #B97375;
-  background-color: #EAD1CE;
-  height: 45px;
-  line-height: 45px;  
-  margin-bottom: 10px;
-  font-size: 1em;
-  color: #281E30;
-}
-
-input textarea {
-  color: #B97375;
-}
-
-[type=submit] {
-  margin-top: 25px;
-  width: 80%;
-  border: 0;
-  background-color: #F26A62;
-  border-radius: 5px;
-  height: 50px;
-  color: white;
-  font-weight: 400;
-  font-size: 1em;
+  outline: none;
+  border: 3px;
+  border-color: #281E30;
 }
 
 [type='text']:focus {
@@ -180,132 +108,4 @@ input textarea {
   border-color: #F26A62;
 }
 
-
-// end form stuff
-
-
-
-
-
-// EMOJI --------------> 
-
-.button-emoj {
-  text-decoration: none;
-  color: black;
-  -webkit-transition: all .25s;
-  transition: all .25s;
-}
-.button-emoj svg {
-  height: 64px;
-  width: 64px;
-  overflow: visible;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-.button-emoj .eyes #eye-right,
-.button-emoj .eyes #eye-left {
-  -webkit-animation: heartbeat 2s ease infinite;
-          animation: heartbeat 2s ease infinite;
-}
-.button-emoj .eyes #eye-right {
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
-  -webkit-animation-delay: .15s;
-          animation-delay: .15s;
-  -webkit-animation-duration: 2.25s;
-          animation-duration: 2.25s;
-}
-.button-emoj .eyes #eye-left {
-  -webkit-transform-origin: center right;
-          transform-origin: center right;
-}
-.button-emoj:hover .eyes #eye-right {
-  -webkit-animation: hearts-large .35s ease infinite;
-          animation: hearts-large .35s ease infinite;
-}
-.button-emoj:hover .eyes #eye-left {
-  -webkit-animation: hearts-large .4s ease infinite;
-          animation: hearts-large .4s ease infinite;
-}
-
-@-webkit-keyframes hearts-large {
-  0% {
-    -webkit-transform: none;
-            transform: none;
-  }
-  50% {
-    -webkit-transform: scale(1.1) translateY(-5px);
-            transform: scale(1.1) translateY(-5px);
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes hearts-large {
-  0% {
-    -webkit-transform: none;
-            transform: none;
-  }
-  50% {
-    -webkit-transform: scale(1.1) translateY(-5px);
-            transform: scale(1.1) translateY(-5px);
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-}
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  10% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  15% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  20% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  10% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  15% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  20% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
+/* End Form */

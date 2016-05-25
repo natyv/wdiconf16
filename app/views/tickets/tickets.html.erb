@@ -1,194 +1,85 @@
 <div class="container">
   <div class="tickets-container">
 
+    <form action="/tickets/submit" method="post" id="payment-form">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
   <section class="accountInformation">
     <h1>WDI Conf Ticket Purchase</h1>
-      <h4>Enter The Ticket Holder Details</h4>
+      <h4>Ticket Holder Details</h4>
     <ul>
       <li>
         <div class="col-span-50">
-        <input type="text" id="acctFirstName" name="acctFirstName" placeholder="First Name" />
+        <input type="text" id="acctFirstName" name="firstname" minlength="2" placeholder="First Name" />
         </div>
         <div class="col-span-50">
-        <input type="text" id="acctLastName" name="acctLastName" placeholder="Last Name" />
+        <input type="text" id="acctLastName" name="lastname" value="" minlength="2" placeholder="Last Name" />
         </div>
       </li>
       <li>
         <div class="col-span-50">
-        <input type="text" id="acctEmail" name="acctEmail" placeholder="Email" />
+        <input type="text" id="acctEmail" name="email" value="" placeholder="Email" />
           </div>
-        <div class="col-span-50">
-        <input type="text" id="acctEmailConfirm" name="acctEmailConfirm" placeholder="Confirm Email" />
-          </div>
+        <div class="col-span-50">          
+          <label for="">Number of Tickets</label>
+          <select class="thickGrayDblBorder" id='num_of_tickets'></select>​
+        </div>
       </li>
     </ul>
   </section>
+      
+      <span class="payment-errors"></span>
 
   <section class="paymentInformation">
     <h3>Payment Information</h3>
     <ul>
-      
       <li>
         <div class="col-span-100">
-          <input type="text" id="nameOnCard" name="nameOnCard" placeholder="Name on Card" />
-        </div>
-      </li>
-      <li>
-        <div class="col-span-100">
-          <input type="text" id="cardNumber" name="cardNumber" placeholder="Credit Card #" />
+          <input type="text" data-stripe="number" id="cardNumber" size="20" name="cardNumber" placeholder="Credit Card #" />
         </div>
       </li>
       
       <li>
         <div class="col-span-50">
-          <select class="thickGrayDblBorder" id="expMonth" name="expMonth">
-            <option value="-1">Expiration Month</option>
-          </select>
+          <input type="text" data-stripe="exp_month" id="expMonth" size="2" name="expMonth" placeholder="Expiration Month (MM)" />
         </div>
         <div class="col-span-50">
-            <select class="thickGrayDblBorder"  id="expYear" name="expYear">
-              <option value="-1">Expiration Year</option>
-            </select>
+
+       <input type="text" data-stripe="exp_year" id="expMonth" size="2" name="expMonth" placeholder="Expiration Year (YY)" />
         </div>
       </li>
       <li>
         <div class="col-span-50">
-          <input type="text" id="securityCode" name="securityCode" placeholder="Security Code" />
+          <input type="text" size="4" data-stripe="cvc" id="securityCode" name="securityCode" placeholder="CVC Security Code" />
         </div>
         <div class="col-span-50">
-            <a href="#" class="smallPrint whatIsThis">What is this?</a>
-            <img src="http://s.cdpn.io/6209/cc_Icon.png" />
+            <div class="smallPrint whatIsThis">
+            <img src="http://s.cdpn.io/6209/cc_Icon.png" /></div>
         </div>
       </li>
+
+      <li><div class="col-span-100">
+          <input type="submit" class="btn" value="Submit Payment">
+        </div></li>
+    </form>
+
       <p class="smallPrint col-span-100">
-        Charge my credit card $12.00 total for the first 12 weeks of my Wall Street Journal subscription. Thereafter, service will continue and my credit card will be charged monthly at the prevailing rate, currently $26.99. Sales tax may apply. I will be notified in advance of any price increase. For questions about my subscription or to discontinue, I can call Customer Service at 1-800-JOURNAL (568-7625).
+        Charge my credit card for the full ticket price of $200. On the 26th May the final price (only equal to or less than $200) will be confirmed, and you will be refunded the difference.
       </p>
+
     </ul>
   </section>
-  
-  <section class="billingAddress">
-    <h3>Billing Address</h3>
-    <ul>
-      <li>
-        <div class="col-span-33">
-        <input type="text" id="billHouseNumber" name="billHouseNumber" placeholder="House #" /> 
-        </div>
-        <div class="col-span-66">
-          <input type="text" id="streetName" name="streetName" placeholder="Street Name" />
-        </div>
-        </li>
-      <li>
-        <div class="col-span-100">
-          <input type="text" id="billCity" name="billCity" placeholder="City" />
-        </div>
-      </li>
-      <li>
-        <div class="col-span-50">
-        <select id="billState" class="thickGrayDblBorder" name="billState">
-          <option value="-1">State</option>
-        </select>
-        </div>
-        <div class="col-span-50">
-        <input type="text" id="billZip" name="billZip" placeholder="Zipcode" />
-        </div>
-        </li>
-    </ul>
-  </section>
-
-  <section class="emailUpdates">
-    <h3>Email Updates</h3>
-    <ul>
-      <li>
-        <div class="col-span-100">
-          <input class="overRide-noHeight" type="checkbox" id="chkReceiveUpdates" name="chkReceiveUpdates" value="1" checked="checked"/>
-          <label class="overRide-floatRight" for="chkReceiveUpdates">Receive updates and special offers from Dow Jones.</label>
-        </div>
-        </li>
-      <li>
-        <div class="col-span-100">
-          <input type="submit" class="btn" id="btnComplete" name="btnComplete" value="Complete Purchase »" />
-        </div>
-        </li>
-      <li>
-        <div class="col-span-100 smallPrint">
-        <p>*Introductory pricing is only available to households or customers at a business address who have not been subscribers to The Wall Street Journal within the last 180 days.</p>
-        <p>Please note that your subscription will renew automatically unless you cancel prior to renewal.</p>
-        <p>Our secure server software encrypts information to protect your transaction.</p>
-        </div>
-      </li>
-    </ul>
-  </section>
-  
-<h1>Buy a ticket for WDI6 Conf.</h1>
-<h3>Total: $<span id="amount">200</span></h3>
-
-<form action="/tickets/submit" method="post" id="payment-form">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <h2>Your information</h2>
-    <label for="">First name</label>
-    <input type="text" name="firstname" value="" minlength="2">
-    <label for="">Last name</label>
-    <input type="text" name="lastname" value="" minlength="2">
-    <label for="">Email</label>
-    <input type="email" name="email" value="">
-    <label for="">Number of Tickets</label>
-    <select id='num_of_tickets' name ='num_of_tickets'></select>​
-
-    <!-- modal -->
-<div id="processing-notice" class="modal">
-  <div class="modal-content">
-    <p>Please Wait while we are processing you details ...</p>
-  </div>
-</div>
-
-
-
-
-  <div class="tickets-container">
-    <h1>Buy a ticket for WDI6 Conf.</h1>
-    <h3>Total: $<span id="amount">200</span></h3>
-
-    <form action="/tickets/submit" method="post" id="payment-form">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <h2>Your information</h2>
-        <label for="">First name</label>
-        <input type="text" name="firstname" value="" minlength="2">
-        <label for="">Last name</label>
-        <input type="text" name="lastname" value="" minlength="2">
-        <label for="">Email</label>
-        <input type="email" name="email" value="">
-        <label for="">Number of Tickets</label>
-        <select id='num_of_tickets'></select>​
+</div></div>
 
         <!-- modal -->
     <div id="processing-notice" class="modal">
       <div class="modal-content">
-        <p>Please Wait while we are processing you details ...</p>
+        <p>Please wait while we are processing you payment ...</p>
       </div>
     </div>
 
-      <h2>Payment information</h2>
-
-      <span class="payment-errors"></span>
-
-        <label>Card Number</label>
-        <input type="text" size="20" data-stripe="number">
-
-        <label>Expiration (MM/YY)</label>
-        <input type="text" size="2" data-stripe="exp_month">
-        <span> / </span>
-        <input type="text" size="2" data-stripe="exp_year">
-
-        <label>CVC</label>
-        <input type="text" size="4" data-stripe="cvc">
-
-        <input id="submit-payment-btn" type="submit" class="submit" value="Submit Payment">
-    </form>
   </div>
-  <div class="footer">Made with <strong>girl power</strong> for WDI6.</div>
 </div>
-
-
 
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
