@@ -64,6 +64,18 @@ body {
 @media (max-width: 549px) {
   .chart-wrapper {
     position: absolute;
-    top: 48%
+    top: 48%;
+    left: 12%;
+  }
+}
+
+@media (max-width: 414px) {
+  .chart-wrapper {
+    left: 0;
+    top: 52%;
+  }
+  .hero-container {
+    height: 630px;
+    margin-top: 4em !important;
   }
 }
