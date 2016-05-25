@@ -5,11 +5,17 @@
 
 .map-container, #map {
   min-height: 70vh;
+
 }
 
 .conference-info {
   background-color: #402238;
   color: white;
+  flex: 1;
+  margin-bottom: 40px;
+}
+
+
 }
 
 .scrollToTop{
@@ -30,3 +36,4 @@
 .scrollToTop:hover{
 	text-decoration:none;
 }
+>>>>>>> df50b332209ab69a1870f9bff72bb9c4c9d1ccc9
