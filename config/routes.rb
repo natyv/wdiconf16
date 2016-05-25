@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/' => 'tickets#index'
 
   get '/tickets' => 'tickets#tickets'
+  get '/tickets/soldout' => 'tickets#soldout'
   post '/tickets/submit' => 'tickets#submit'
 
   get '/sponsors' => 'sponsors#sponsors'

@@ -15,7 +15,7 @@ class TicketsController < ApplicationController
     ticket_discount = (total_sponsor_amount / total_num_of_tix)
     progress_deci = (ticket_discount.to_f / ticket_price)
 
-    @progress = (progress_deci * 100)
+    @progress = (progress_deci)
     @current_price = ticket_price.to_f - ticket_discount.to_f
 
   end
@@ -52,7 +52,6 @@ class TicketsController < ApplicationController
     })
     redirect_to '/'
   end
-
 
   private
     def sortable_columns

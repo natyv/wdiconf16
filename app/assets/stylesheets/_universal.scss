@@ -13,6 +13,21 @@ $darkest-color: #1B1421;
     background: linear-gradient(#EAD1CE, #B97375, #402238);
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
 
 hr {
   // height: 3px;
@@ -121,9 +136,11 @@ body {
 
 /* END General button style (reset) */
 
+
 footer {
   color: $light-color;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: $darkest-color;
 }
+
