@@ -11,9 +11,16 @@
     <div class="row">
       <div class="one-half column chart-wrapper">
         <!-- chart code -->
-          <div class="o-progress-circle o-progress-circle--rounded">
+        <span id="progress" style="display:none"><%= @progress %></span>
+          <div id="progresschart">
+
+          </div>
+
+          <!-- <div class="o-progress-circle o-progress-circle--rounded">
             <div class="o-progress-circle__number">
-              <span data-pourcent><%= @progress %></span><em>%</em>
+              <span id="progress-percent" data-percent><%= @progress %></span>
+              <p>$<%= @current_price %>*</p>
+              <span class="sub-text">Current ticket price</span>
             </div>
             <div class="o-progress-circle__fill">
               <svg class="icon" viewBox="0 0 40 40">
@@ -21,7 +28,7 @@
                   <circle r="15.9154943092" cy="20" cx="20" stroke-dashoffset="25" transform="rotate(-90,20,20)" />
                 </svg>
             </div>
-          </div>
+          </div> -->
         <!-- end of chart code -->
       </div>
       <div class="one-half column header-info">
