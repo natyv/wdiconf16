@@ -1,38 +1,39 @@
-
-<% if logged_in? %>
-  <form action="/logout" method ="post">
-    <input type="hidden" value="delete" name="_method">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <button>Sign Out</button>
-  </form>
-  <h2>Hello <%= current_user.username %></h2>
-  <h3>Tickets Sold: <%=   Ticket.sum(:num_of_tickets) %>
-  </h3>
-<div class="container">
-  <div class ="row">
-    <table class="u-full-width">
-      <thead>
-        <tr>
-          <th>Company Name</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @sponsors.each do |sponsor| %>
-
+<div class="admin-container">
+  <% if logged_in? %>
+    <form action="/logout" method ="post">
+      <input type="hidden" value="delete" name="_method">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <button class='btn-1'>Sign Out</button>
+    </form>
+    <h2>Hello <%= current_user.username %></h2>
+    <h3>Tickets Sold: <%=   Ticket.sum(:num_of_tickets) %>
+    </h3>
+  <div class="container">
+    <div class ="row">
+      <table class="u-full-width">
+        <thead>
           <tr>
-            <td><%= sponsor.company_name %></td>
-            <td><%= sponsor.first_name %></td>
-            <td><%= sponsor.email %></td>
-            <td><%= sponsor.amount %></td>
+            <th>Company Name</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Amount</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @sponsors.each do |sponsor| %>
+
+            <tr>
+              <td><%= sponsor.company_name %></td>
+              <td><%= sponsor.first_name %></td>
+              <td><%= sponsor.email %></td>
+              <td><%= sponsor.amount %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
+    <% else %>
+      <button class='btn-1'><a href="/login">Login</a></button>
+  <% end %>
 </div>
-  <% else %>
-    <a href="/login">Login</a>
-<% end %>

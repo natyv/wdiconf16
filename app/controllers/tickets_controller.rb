@@ -53,7 +53,6 @@ class TicketsController < ApplicationController
     redirect_to '/'
   end
 
-
   private
     def sortable_columns
       [ "amount"]

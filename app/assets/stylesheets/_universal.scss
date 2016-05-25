@@ -20,6 +20,23 @@ body {
 
 // Divider line
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
 hr {
   background: white;
   outline: none;
@@ -42,6 +59,15 @@ hr:before {
 
 hr#four:before {
   border: 3px solid white;
+}
+
+body {
+  background: #402238;
+  height: 100%;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh;
+
 }
 
 // For Images -------------->
@@ -109,3 +135,10 @@ hr#four:before {
 }
 
 /* End Form */
+
+footer {
+  color: $light-color;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: $darkest-color;
+}
