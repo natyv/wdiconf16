@@ -1,3 +1,22 @@
+// new progress circle
+
+$(document).ready(function() {
+  var progressChart = document.getElementById('progresschart');
+  var progress = document.getElementById('progress').innerHTML;
+
+  var bar = new ProgressBar.Circle(progressChart, {
+    strokeWidth: 6,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#FFEA82',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: null
+  });
+
+  bar.animate(progress);  // Number from 0.0 to 1.0
+});
+
 // map stuffs
 
 function initMap() {
