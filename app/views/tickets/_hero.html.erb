@@ -6,29 +6,30 @@
 </div>
 
 <!-- END Payment Confirmation  -->
-<div class="hero-container">
-  <div class="container">
-    <div class="row">
-      <div class="one-half column chart-wrapper">
-        <!-- chart code -->
-        <span id="progress" style="display:none"><%= @progress %></span>
-          <div class="chart-wrapper">
-            <div id="progresschart">
-            <p id="funded"><%= @progress * 100 %>% funded!</p>
-            <p id="inside-text">Current ticket price: $<%= @current_price %></p>
-            <p id="info-link"><a href="#">What does this mean?</a></p>
+
+<div class="hero-background">
+  <div class="hero-container">
+      <div class="one-half column">
+          <!-- chart code -->
+          <span id="progress" style="display:none"><%= @progress %></span>
+            <div class="chart-wrapper">
+              <div id="progresschart">
+                <div id="inside-text">
+                  <p><%= @progress * 100 %>% funded!</p>
+                  <p>Current ticket price: $<%= @current_price %></p>
+                  <p><a href="#">What does this mean?</a></p>
+                </div>
+              </div>
             </div>
-          </div>
-        <!-- end of chart code -->
+          <!-- end of chart code -->
       </div>
       <div class="one-half column header-info">
-        <h1 class="marker">WDI Conf</h1>
-        <h2 class="feature">Melbourne</h2>
-        <p>May 27th, 2016 | General Assembly</p>
-        <p>The first fully sponsor funded conference!</p>
-        <button>Sponsor</button>
-        <button>Buy Tickets</button>
+          <h1 class="marker">WDI Conf</h1>
+          <h2 class="feature">Melbourne</h2>
+          <p>May 27th, 2016 | General Assembly</p>
+          <p>The first fully sponsor funded conference!</p>
+          <button>Sponsor</button>
+          <button>Buy Tickets</button>
       </div>
-    </div>
   </div>
 </div>
