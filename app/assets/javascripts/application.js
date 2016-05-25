@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require app.js
 //= require jquery_ujs
 //= require turbolinks
+//= require app.js
 //= require payment.js
 //= require sessions.coffee
 //= require ticket_purchase.js
