@@ -15,12 +15,11 @@
       <% end %>
     </div>
 
-    <div class ="other-sponsors">
-      <% @sponsors[4..@sponsors.length].each do |sponsor| %>
-        <a href="<%= sponsor.website %>"><img src="<%=  sponsors_logo_url(url: sponsor.image_url, size: 'small') %>" alt="<%= sponsor.company_name %>"></a>
-      <% end %>
-      </div>
-    </div>
+  <div class ="other-sponsors">
+    <% @sponsors[4..@sponsors.length].each do |sponsor| %>
+      <a href="<%= sponsor.website %>"><img src="<%=  sponsors_logo_url(url: sponsor.image_url, size: 'small') %>" alt="<%= sponsor.company_name %>"></a>
+    <% end %>
+  </div>
   </div>
 </div>
 

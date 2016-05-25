@@ -9,9 +9,16 @@ $dark-color: #402238;
 $darkest-color: #1B1421;
 
 
+body {
+  background: #402238;
+
+}
+
 #background-gradient {
     background: linear-gradient(#EAD1CE, #B97375, #402238);
 }
+
+// Divider line
 
 a {
   text-decoration: none;
@@ -29,12 +36,10 @@ a:active {
     text-decoration: none;
 }
 
+
 hr {
-  // height: 3px;
   background: white;
-  // border: none;
   outline: none;
-  // margin-top: 3em 3em 5em;
   position: relative;
   border-top: 3px solid #FFFFFF;
 }
@@ -56,8 +61,6 @@ hr#four:before {
   border: 3px solid white;
 }
 
-
-
 body {
   background: #402238;
   height: 100%;
@@ -67,18 +70,6 @@ body {
 
 }
 
-// .colly1 {
-//   background-color: red;
-// }
-
-// .colly2 {
-//   background-color: yellow;
-// }
-
-// .colly3 {
-//   background-color: blue;
-// }
-
 // For Images -------------->
 
 .border {
@@ -87,12 +78,10 @@ body {
 
 }
 
-/* General button style (reset) */
+/* Master Button Style */
 .btn {
-  border: none;
   font-family: Roboto;
   font-size: inherit;
-  color: inherit;
   background: none;
   cursor: pointer;
   padding: 15px 50px;
@@ -107,7 +96,8 @@ body {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   text-decoration: none;
-
+  border: 3px solid #fff;
+  color: #fff;
 }
 
 .btn:after {
@@ -119,23 +109,32 @@ body {
   transition: all 0.3s;
 }
 
-
-/* Button 1 */
-.btn-1 {
-  border: 3px solid #fff;
-  color: #fff;
-}
-
-/* Button 1a */
-.btn-1a:hover,
-.btn-1a:active {
+.btn:hover,
+.btn:active {
   color: #FFFFFF;
   background: #F26A62;
   text-decoration: none;
 }
 
-/* END General button style (reset) */
+/* END General button style  */
 
+/* FORMS */
+
+[type=text] {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  outline: none;
+  border: 3px;
+  border-color: #281E30;
+}
+
+[type='text']:focus {
+  outline: none;
+  border-color: #F26A62;
+}
+
+/* End Form */
 
 footer {
   color: $light-color;
@@ -143,4 +142,3 @@ footer {
   padding-bottom: 8px;
   background-color: $darkest-color;
 }
-
