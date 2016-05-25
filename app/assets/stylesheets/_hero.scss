@@ -25,17 +25,29 @@
   height: 300px;
 }
 
+#funded {
+  position: absolute;
+  bottom: 145px;
+  left: 94px;
+}
+
 #inside-text {
   position: absolute;
   bottom: 117px;
   left: 43px;
 }
 
+#info-link {
+  position: absolute;
+  bottom: 90px;
+  left: 66px;
+}
+
 .marker {
   font-family: 'Permanent Marker', cursive;
-  color: $feature-color
+  color: $feature-color;
 }
 
 .feature {
-  color: $light-color
+  color: $light-color;
 }
