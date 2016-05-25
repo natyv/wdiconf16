@@ -1,4 +1,23 @@
-//timetable 
+// new progress circle
+
+$(document).ready(function() {
+  var progressChart = document.getElementById('progresschart');
+  var progress = document.getElementById('progress').innerHTML;
+
+  var bar = new ProgressBar.Circle(progressChart, {
+    strokeWidth: 6,
+    easing: 'easeInOut',
+    duration: 1400,
+    color: '#FFEA82',
+    trailColor: '#eee',
+    trailWidth: 1,
+    svgStyle: null
+  });
+
+  bar.animate(progress);  // Number from 0.0 to 1.0
+});
+
+//timetable
 
 var descriptions = {
   event1: '<h3>You Code Like a Girl. Good for you!</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>',
@@ -17,12 +36,10 @@ $(document).ready(function() {
     $(this).addClass('selected-event');
     var event = this.id
     $('#event-description').fadeOut('slow', function() {
-     $('#event-description').html(descriptions[event]).fadeIn('slow'); 
+     $('#event-description').html(descriptions[event]).fadeIn('slow');
     });
   });
 });
-
-
 
 // map stuffs
 
