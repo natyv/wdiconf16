@@ -5,9 +5,31 @@
 
 .map-container, #map {
   min-height: 70vh;
+
 }
 
 .conference-info {
   background-color: #402238;
   color: white;
+  flex: 1;
+  margin-bottom: 40px;
+}
+
+.scrollToTop{
+	width: 70px;
+	height:100px;
+	padding:10px;
+	text-align:center;
+	background: whiteSmoke;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:450px;
+	right:10px;
+	display:none;
+	background: url('arrow_up.png') no-repeat;
+}
+.scrollToTop:hover{
+	text-decoration:none;
 }
