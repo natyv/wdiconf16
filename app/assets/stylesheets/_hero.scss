@@ -39,7 +39,7 @@
 
 #info-link {
   position: absolute;
-  bottom: 90px;
+  bottom: 87px;
   left: 66px;
 }
 
@@ -50,4 +50,27 @@
 
 .feature {
   color: $light-color;
+}
+
+@media (max-width: 800px) {
+  .header-info {
+    top: 6vh;
+    right: 25%;
+  }
+  #progresschart {
+    top: 202px;
+    left: 50%;
+  }
+  .hero-container {
+    height: 800px;
+  }
+  .chart-wrapper {
+    top: 12vh;
+  }
+}
+
+@media (max-width: 714px) {
+  .chart-wrapper {
+    top: 16vh;
+  }
 }
