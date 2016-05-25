@@ -10,8 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
+//= require progressbar.min.js
+//= require app.js
 //= require turbolinks
 //= require app.js
 //= require payment.js
