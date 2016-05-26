@@ -32,7 +32,7 @@ class SponsorsController < ApplicationController
   	:from => 'isha.negi19@gmail.com',
     :to => "#{params[:email]}",
     :subject => "Ticket Confirmation from WDIConf 2016",
-    :body => "Dear #{params[:first_name]}, We thank #{params[:company_name]} so much for your generous support of WDI Conf. Your complimentary tickets and advertising opportunity information will be sent in a follow up email. Kind regards, the organisers of WDI Conf - Christie, Isha, Karina, Pranati & LJ",
+    :body => "Dear #{params[:first_name]}, We thank #{params[:company_name]} so much for your generous support of WDI Conf. Your complimentary tickets and advertising information will be sent in a follow up email. Kind regards, the organisers of WDI Conf",
     :via => :smtp,
     :via_options => {
       :address              => 'smtp.gmail.com',
