@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
   var overlay = $('#overlay');
   // open info modal on click
-  $('#info-link').on('click', function(event) {
+  $('.info-link').on('click', function(event) {
     event.preventDefault();
     console.log(event);
     overlay.show();
@@ -121,7 +121,7 @@ infoMods.each(function(i, el) {
   $(".notice").on("click", function() {
     $(this).hide("slow");
   });
- 
+
  // Check to see if the window is top if not then display button
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
@@ -142,11 +142,11 @@ infoMods.each(function(i, el) {
 //timetable
 
 var descriptions = {
-  event1: '<h3>You Code Like a Girl. Good for you!</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>',
-  event2: '<h3>Keynote: contributing to open source as a junior</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>',
-  event3: '<h3>You Code Like a Girl. Good for you!</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>',
-  event4: '<h3>Keynote: contributing to open source as a junior</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>',
-  event5: '<h3>You Code Like a Girl. Good for you!</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>'
+  event1: '<h3>Keynote: contributing to open source as a junior</h3><p>For those starting out in the software development world, contributing to open source projects can feel out of reach and intimidating. Pranati will be addressing some of those fundamental questions, on how the open source world works.</p>',
+  event2: '<h3>You code like a girl - good for you!</h3><p>LJ, head of engineering at Oz Hip Hop discusses the benefits of diversity in teams. It has been scientifically proven that teams made up of members from diverse backgrounds outperform teams of a more homogenous demographic, and LJ explores this topic with experience running her own teams. </p>',
+  event3: '<h3>How to become a web developer - changing careers</h3><p>There is huge demand for web developers today, and the working conditions at tech companies appear to be second to none (think beer fridges, slides and ping pong tables). Knowing what to learn, and how to go about learning web development is a mine-field. Christie discusses some effective ways people are re-training as web developers nowadays.</p>',
+  event4: '<h3>Awesome data Visualisation</h3><p>D3 is a JS library that helps you bring your data to life on the DOM using HTML, SVG and CSS. In this hour, Isha will talk you through getting set up with your first D3 project, and provide some ideas on how to bring interest to your data by displaying it dynamically!</p>',
+  event5: '<h3>Ruby basics</h3><p>Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It\'s elegant syntax is both easy to read and write. Pranati will talk those new to the language, or the software development world about the wonders of ruby. She claims it to be so simple, her 9 year old daughter is already coding in Ruby!</p>'
 };
 
 
@@ -213,5 +213,3 @@ var marker = new google.maps.Marker({
   icon: image
 });
 }
-
-
