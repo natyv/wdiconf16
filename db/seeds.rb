@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Speaker.create(name: 'LJ', description: 'LJ is an enthusiastic junior developer with a passion for creating responsive CSS layouts and hip hop music', image_url: 'http://placehold.it/150x150', talk: "How to run a hip hop website" )
+Speaker.create(name: 'LJ', description: 'LJ is an enthusiastic junior developer with a passion for creating responsive CSS layouts and hip hop music', image_url: 'LJ.png', talk: "How to run a hip hop website" )
 
 Speaker.create(name: 'Nat', description: 'Nat is a great junior backend developer with a passion for getting kids interested in coding', image_url: 'Pranati.png', talk: "Ruby Basics" )
 
