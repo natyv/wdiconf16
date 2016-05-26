@@ -1,5 +1,19 @@
+
 // Transition animation for speakers
 $( document ).ready(function() {
+
+  var overlay = $('#overlay');
+  // open info modal on click
+  $('#info-link').on('click', function(event) {
+    event.preventDefault();
+    console.log(event);
+    overlay.show();
+  });
+  // close the modal
+  overlay.click(function() {
+    overlay.hide();
+  })
+
   var progressChart = document.getElementById('progresschart');
   var progress = document.getElementById('progress').innerHTML;
 
