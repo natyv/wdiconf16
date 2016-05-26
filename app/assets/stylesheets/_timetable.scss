@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+th:first-child, td:first-child {
+  padding-left: 14px !important;
+}
+
 .fade-in {
   animation: fadein 2s;
 }
