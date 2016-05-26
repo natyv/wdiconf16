@@ -136,6 +136,12 @@ body {
 
 /* End Form */
 
+.notice {
+  color: white;
+  background-color: $feature-color;
+  cursor: pointer;
+}
+
 footer {
   color: $light-color;
   padding-top: 8px;

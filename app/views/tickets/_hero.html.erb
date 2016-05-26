@@ -1,5 +1,5 @@
 <!-- Payment Confirmation  -->
-<div class= "notice">
+<div class="notice">
     <% if flash[:notice] %>
     <%= flash[:notice] %>
     <% end %>
@@ -117,7 +117,11 @@
             <div class="chart-wrapper">
               <div id="progresschart">
                 <div id="inside-text">
-                  <p><%= @progress * 100 %>% funded!</p>
+                  <% if @progress < 1 %>
+                    <p><%= @progress * 100 %>% funded!</p>
+                  <% else %>
+                    <p> Free ticket! </p>
+                  <% end %>
                   <p>Current ticket price: $<%= @current_price %></p>
                   <p><a href="#" id="info-link">What does this mean?</a></p>
                 </div>
@@ -156,3 +160,23 @@
     </p>
   </div>
 </div>
+<script>
+    var colors = {
+  	"gray": "font-weight: bold; color: #1B2B34;",
+  	"red": "font-weight: bold; color: #EC5f67;",
+  	"orange": "font-weight: bold; color: #F99157;",
+  	"yellow": "font-weight: bold; color: #FAC863;",
+  	"green": "font-weight: bold; color: #99C794;",
+  	"teal": "font-weight: bold; color: #5FB3B3;",
+  	"blue": "font-weight: bold; color: #6699CC;",
+  	"purple": "font-weight: bold; color: #C594C5;",
+  	"brown": "font-weight: bold; color: #AB7967;"
+  }
+
+  console.log('%cMade with Love by The Splice Girls', colors.red);
+  console.log('%cChristie', colors.orange);
+  console.log('%cIsha', colors.yellow);
+  console.log('%cLJ', colors.teal);
+  console.log('%cKarina', colors.blue);
+  console.log('%cPranati', colors.purple);
+</script>
