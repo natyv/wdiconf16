@@ -130,7 +130,6 @@ $(document).ready(function() {
     $(this).addClass('selected-event');
     $('#event-description').html(descriptions[this.id]);
   });
-
 });
 
 
