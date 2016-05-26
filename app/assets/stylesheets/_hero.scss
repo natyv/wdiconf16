@@ -1,41 +1,81 @@
-.hero-container {
-    position:relative;
-    width:100%;
-    height:600px;
-    background: -webkit-linear-gradient(left top, $dark-color, $darkest-color) no-repeat;
-    color: white;
+body {
+  margin: 0 auto;
 }
 
-.header-info {
-  position: absolute;
-  top: 25vh;
-  right: 0;
+.hero-background {
+  width: 100%;
+  background: -webkit-linear-gradient(left top, $dark-color, $darkest-color) no-repeat;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    position:relative;
+    width:70%;
+    margin-top: 6em !important;
+    height:600px;
+    color: white;
+    margin: auto;
 }
 
 .chart-wrapper {
   position: relative;
-  top: 10vh;
 }
 
-
 #progresschart {
-  position: absolute;
-  margin: 20px;
   width: 300px;
   height: 300px;
+  position: absolute;
 }
 
 #inside-text {
+  display: inline;
   position: absolute;
-  bottom: 117px;
-  left: 43px;
+  left: 13%;
+  top: 26%;
+}
+
+#inside-text a {
+  color: $feature-color
+}
+
+#inside-text a:hover {
+  color: $light-color
 }
 
 .marker {
   font-family: 'Permanent Marker', cursive;
-  color: $feature-color
+  color: $feature-color;
 }
 
 .feature {
-  color: $light-color
+  color: $light-color;
+}
+
+// custom media queries
+
+@media (max-width: 767px) {
+  .chart-wrapper {
+    position: absolute;
+    left: -20%;
+  }
+}
+
+@media (max-width: 549px) {
+  .chart-wrapper {
+    position: absolute;
+    top: 48%;
+    left: 12%;
+  }
+}
+
+@media (max-width: 414px) {
+  .chart-wrapper {
+    left: 0;
+    top: 52%;
+  }
+  .hero-container {
+    height: 630px;
+    margin-top: 4em !important;
+  }
 }
