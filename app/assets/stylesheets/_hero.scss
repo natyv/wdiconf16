@@ -79,3 +79,33 @@ body {
     margin-top: 4em !important;
   }
 }
+
+// overlay
+
+#overlay {
+  background: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+  margin: auto;
+}
+
+#modal {
+  margin: auto;
+  margin-top: 3em;
+  min-height: 300px;
+  max-width: 70%;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid grey;
+  position: relative;
+  z-index: 100;
+}
+
+#modal p, h4 {
+  padding: 1em;
+}
