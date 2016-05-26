@@ -1,98 +1,87 @@
 <div class="container">
   <div class="tickets-container">
-
     <form action="/tickets/submit" method="post" id="payment-form">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
-  <section class="accountInformation">
-    <h1>WDI Conf Ticket Purchase</h1>
-      <h4>Ticket Holder Details</h4>
-    <ul>
-      <li>
-        <div class="col-span-50">
-        <input type="text" id="acctFirstName" name="firstname" minlength="2" placeholder="First Name" />
-        </div>
-        <div class="col-span-50">
-        <input type="text" id="acctLastName" name="lastname" value="" minlength="2" placeholder="Last Name" />
-        </div>
-      </li>
-      <li>
-        <div class="col-span-50">
-        <input type="text" id="acctEmail" name="email" value="" placeholder="Email" />
-          </div>
-        <div class="col-span-50">          
-          <label for="">Number of Tickets</label>
-          <select class="thickGrayDblBorder" id='num_of_tickets'></select>​
-        </div>
-      </li>
-    </ul>
-  </section>
-      
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <section class="accountInformation">
+        <h1>WDI Conf Ticket Purchase</h1>
+        <h4>Ticket Holder Details</h4>
+        <ul>
+          <li>
+            <div class="col-span-50">
+              <input type="text" id="acctFirstName" name="firstname" minlength="2" placeholder="First Name" />
+            </div>
+            <div class="col-span-50">
+              <input type="text" id="acctLastName" name="lastname" value="" minlength="2" placeholder="Last Name" />
+            </div>
+          </li>
+          <li>
+            <div class="col-span-50">
+              <input type="text" id="acctEmail" name="email" value="" placeholder="Email" />
+            </div>
+            <div class="col-span-50">
+              <label for="">Number of Tickets</label>
+              <select class="thickGrayDblBorder" id='num_of_tickets'></select>
+            </div>
+          </li>
+        </ul>
+      </section>
       <span class="payment-errors"></span>
-
-  <section class="paymentInformation">
-    <h3>Payment Information</h3>
-    <ul>
-      <li>
-        <div class="col-span-100">
-          <input type="text" data-stripe="number" id="cardNumber" size="20" name="cardNumber" placeholder="Credit Card #" />
-        </div>
-      </li>
-      
-      <li>
-        <div class="col-span-50">
-          <input type="text" data-stripe="exp_month" id="expMonth" size="2" name="expMonth" placeholder="Expiration Month (MM)" />
-        </div>
-        <div class="col-span-50">
-
-       <input type="text" data-stripe="exp_year" id="expMonth" size="2" name="expMonth" placeholder="Expiration Year (YY)" />
-        </div>
-      </li>
-      <li>
-        <div class="col-span-50">
-          <input type="text" size="4" data-stripe="cvc" id="securityCode" name="securityCode" placeholder="CVC Security Code" />
-        </div>
-        <div class="col-span-50">
-            <div class="smallPrint whatIsThis">
-            <img src="http://s.cdpn.io/6209/cc_Icon.png" /></div>
-        </div>
-      </li>
-
-      <li><div class="col-span-100">
-          <input type="submit" class="btn" value="Submit Payment">
-        </div></li>
+      <section class="paymentInformation">
+        <h3>Payment Information</h3>
+        <ul>
+          <li>
+            <div class="col-span-100">
+              <input type="text" data-stripe="number" id="cardNumber" size="20" name="cardNumber" placeholder="Credit Card #" />
+            </div>
+          </li>
+          <li>
+            <div class="col-span-50">
+              <input type="text" data-stripe="exp_month" id="expMonth" size="2" name="expMonth" placeholder="Expiration Month (MM)" />
+            </div>
+            <div class="col-span-50">
+              <input type="text" data-stripe="exp_year" id="expMonth" size="2" name="expMonth" placeholder="Expiration Year (YY)" />
+            </div>
+          </li>
+          <li>
+            <div class="col-span-50">
+              <input type="text" size="4" data-stripe="cvc" id="securityCode" name="securityCode" placeholder="CVC Security Code" />
+            </div>
+            <div class="col-span-50">
+              <div class="smallPrint whatIsThis">
+              <img src="http://s.cdpn.io/6209/cc_Icon.png" /></div>
+            </div>
+          </li>
+          <li>
+            <div class="col-span-100">
+            <input type="submit" class="btn" value="Submit Payment">
+            </div>
+          </li>
+          <p class="smallPrint col-span-100">
+            Charge my credit card for the full ticket price of $200. On the 26th May the final price (only equal to or less than $200) will be confirmed, and you will be refunded the difference.
+          </p>
+          </ul>
+      </section>
     </form>
-
-      <p class="smallPrint col-span-100">
-        Charge my credit card for the full ticket price of $200. On the 26th May the final price (only equal to or less than $200) will be confirmed, and you will be refunded the difference.
-      </p>
-
-    </ul>
-  </section>
-</div></div>
-
-        <!-- modal -->
-    <div id="processing-notice" class="modal">
-      <div class="modal-content">
-        <p>Please wait while we are processing you payment ...</p>
-      </div>
-    </div>
-
+  </div>
+</div>
+<!-- modal -->
+<div id="processing-notice" class="modal">
+  <div class="modal-content">
+    <p>Please wait while we are processing your payment ...</p>
   </div>
 </div>
 
-
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-    $(function(){
-      var $select = $(".1-10");
-      for (i=1;i<=10;i++){
-          $('#num_of_tickets').append($('<option></option>').val(i).html(i));
-          console.log('jhkn');
-      }
-    });
-    $("#num_of_tickets").change(function(){
-        $('#amount').html($(this).val()*200);
-    });
-    Stripe.setPublishableKey('pk_test_r8NTA6dpseAgBXLp56mMQgGA');
+$(function(){
+var $select = $(".1-10");
+for (i=1;i<=10;i++){
+$('#num_of_tickets').append($('<option></option>').val(i).html(i));
+console.log('jhkn');
+}
+});
+$("#num_of_tickets").change(function(){
+$('#amount').html($(this).val()*200);
+});
+Stripe.setPublishableKey('pk_test_r8NTA6dpseAgBXLp56mMQgGA');
 </script>
