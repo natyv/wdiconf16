@@ -1,6 +1,91 @@
-<h1>Sponsor the Amazing WDI Conf 2016</h1>
+<div class="container">
+    <div class="sponsorship-container">
+        <form action="/sponsors/submit" method="post" id="payment-form">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+              <section class="accountInformation">
+                <h1>WDI Conf Sponsorship</h1>
+                  <h4>Sponsor Information</h4>
+                <ul>
+                    <li>
+                    <div class="col-span-50">
+                    <input type="text" id="acctFirstName" name="company_name" value="" placeholder="Company Name" />
+                    </div>
+                    <div class="col-span-50">
+                    <input type="text" id="acctLastName" name="website" value="" placeholder="Website URL" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-span-50">
+                    <input type="text" id="acctFirstName" name="first_name" minlength="2" placeholder="First Name" />
+                    </div>
+                    <div class="col-span-50">
+                    <input type="text" id="acctLastName" name="last_name" value="" minlength="2" placeholder="Last Name" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-span-50">
+                    <input type="text" id="acctEmail" name="email" value="" placeholder="Email" />
+                      </div>
+                    <div class="col-span-50">          
+                      <input type="text" id="acctEmail" name="image_url" value="" placeholder="URL to Logo Image" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-span-50">
+                        <input type="text" name="amount" placeholder="Sponsorship Amount">
+                    </li>
+                </ul>
+
+              </section>
+                  
+                  <span class="payment-errors"></span>
+
+              <section class="paymentInformation">
+                <h3>Payment Information</h3>
+                <ul>
+                  <li>
+                    <div class="col-span-100">
+                      <input type="text" data-stripe="number" id="cardNumber" size="20" name="cardNumber" placeholder="Credit Card #" />
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <div class="col-span-50">
+                      <input type="text" data-stripe="exp_month" id="expMonth" size="2" name="expMonth" placeholder="Expiration Month (MM)" />
+                    </div>
+                    <div class="col-span-50">
+
+                   <input type="text" data-stripe="exp_year" id="expMonth" size="2" name="expMonth" placeholder="Expiration Year (YY)" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-span-50">
+                      <input type="text" size="4" data-stripe="cvc" id="securityCode" name="securityCode" placeholder="CVC Security Code" />
+                    </div>
+                    <div class="col-span-50">
+                        <div class="smallPrint whatIsThis">
+                        <img src="http://s.cdpn.io/6209/cc_Icon.png" /></div>
+                    </div>
+                  </li>
+
+                  <li><div class="col-span-100">
+                      <input type="submit" class="submit btn" value="Submit Payment">
+                    </div></li>
+                </form>
+
+                  <p class="smallPrint col-span-100">
+                    Charge my credit card for the full ticket price of $200. On the 26th May the final price (only equal to or less than $200) will be confirmed, and you will be refunded the difference.
+                  </p>
+
+    </ul>
+  </section>
+</div></div>
 
 
+
+
+<!-- 
 <form action="/sponsors/submit" method="post" id="payment-form">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <label for="">Total Amount: $</label>
@@ -37,6 +122,12 @@
 
     <input id="submit-payment-btn" type="submit" class="submit" value="Submit Payment">
 </form>
+
+  </div>
+</div>
+
+
+ -->
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
