@@ -1,5 +1,6 @@
 require 'RMagick'
 
+
 class Sponsor < ActiveRecord::Base
 
   def self.convert_logo(logo, size)
