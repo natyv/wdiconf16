@@ -9,7 +9,7 @@
 Speaker.destroy_all
 Sponsor.destroy_all
 
-Speaker.create(name: 'LJ', description: 'LJ is a traveller at heart and programmer in heat. With a Hip Hop background LJ bashes out brackets like DJs bang out beats', image_url: 'LJ.png', talk: "Selling Success is The Path To Success")
+Speaker.create(name: 'LJ', description: 'LJ is a traveller at heart and programmer in heat. With a Hip Hop background LJ bashes out brackets like DJs bang out beats.', image_url: 'LJ.png', talk: "Selling Success Is The Path To Success")
 
 Speaker.create(name: 'Nat', description: 'Pranati is a software developer from India. Such a cliche! She is passionate about getting kids coding and getting more girls into STEM. When she is not coding, you’ll probably find her checking out some interesting restaurant in Melbourne. Griping about the weather is her favourite pastime.', image_url: 'Pranati.png', talk: "Keynote: Contributing to Open Source as a Junior" )
 
