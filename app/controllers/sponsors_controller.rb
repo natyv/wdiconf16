@@ -15,12 +15,12 @@ class SponsorsController < ApplicationController
     new_sponsor.image_url = params[:image_url]
     new_sponsor.ref_id = params[:stripeToken]
 
-    if params[:website].include? "http" 
+    if params[:website].include? "http"
       new_sponsor.website = params[:website]
     else
       new_sponsor.website = "http://#{params[:website]}"
     end
-    new_sponsor.save
+    # new_sponsor.save
 
     # process charge with stripe.
     Stripe.api_key = "sk_test_OgmM5tL6FSzS7ULyDFIuUYbn"
