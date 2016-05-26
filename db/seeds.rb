@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Speaker.destroy_all
+Sponsor.destroy_all
+
 Speaker.create(name: 'LJ', description: 'LJ is an enthusiastic junior developer with a passion for creating responsive CSS layouts and hip hop music', image_url: 'LJ.png', talk: "How to run a hip hop website" )
 
 Speaker.create(name: 'Nat', description: 'Nat is a great junior backend developer with a passion for getting kids interested in coding', image_url: 'Pranati.png', talk: "Ruby Basics" )
@@ -29,5 +32,3 @@ Sponsor.create(company_name: 'Night Golf', first_name: "LJ", last_name: "Kenward
 Sponsor.create(company_name: 'BuildKite', first_name: "John", last_name: "Smith", email: "john@home.co", image_url: "http://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/1292/iukn7svdTeev16OTOu1U", amount:"2000", website: "https://buildkite.com/")
 
 Sponsor.create(company_name: 'In a Rush', first_name: "John", last_name: "Smith", email: "john@home.co", image_url: "http://static.wpe.au.syrahost.com/var/m_a/a6/a64/898/4842-In-A-Rush-Logo%20-%20Copy.jpg", amount:"1000", website: "http://inarush.com.au/")
-
-
