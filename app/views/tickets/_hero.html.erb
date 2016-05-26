@@ -123,7 +123,7 @@
                     <p> Free ticket! </p>
                   <% end %>
                   <p>Current ticket price: $<%= @current_price %></p>
-                  <p><a href="#" id="info-link">What does this mean?</a></p>
+                  <p><a href="#" class="info-link">What does this mean?</a></p>
                 </div>
               </div>
             </div>
@@ -136,6 +136,15 @@
           <p>The first fully sponsor funded conference!</p>
           <button class='btn'><a href="/sponsors">Sponsor</a></button>
           <button class='btn'><a href="/tickets">Buy Tickets</a></button>
+      </div>
+      <div class="ticket-info-sml">
+        <% if @progress < 1 %>
+          <p><%= @progress * 100 %>% funded!</p>
+        <% else %>
+          <p> Free ticket! </p>
+        <% end %>
+        <p>Current ticket price: $<%= @current_price %></p>
+        <p><a href="#" class="info-link">What does this mean?</a></p>
       </div>
   </div>
 </div>

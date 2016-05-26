@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
   var overlay = $('#overlay');
   // open info modal on click
-  $('#info-link').on('click', function(event) {
+  $('.info-link').on('click', function(event) {
     event.preventDefault();
     console.log(event);
     overlay.show();
@@ -121,7 +121,7 @@ infoMods.each(function(i, el) {
   $(".notice").on("click", function() {
     $(this).hide("slow");
   });
- 
+
  // Check to see if the window is top if not then display button
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
@@ -213,5 +213,3 @@ var marker = new google.maps.Marker({
   icon: image
 });
 }
-
-
