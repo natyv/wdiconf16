@@ -49,11 +49,24 @@ body {
   .header-info {
     position: absolute;
   }
+  .ticket-info-sml {
+    display: none;
+  }
 }
 
 @media (max-width: 1075px) {
   #progresschart {
     display: none;
+  }
+  .ticket-info-sml {
+    display:inline-block;
+    margin-top: 2em;
+  }
+  .ticket-info-sml a {
+    color: $feature-color;
+  }
+  .ticket-info-sml a:hover {
+    color: $light-color;
   }
   .header-info {
     margin-top: 4em;
