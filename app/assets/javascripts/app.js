@@ -26,7 +26,7 @@ $( document ).ready(function() {
     trailWidth: 1,
     svgStyle: null
   });
-
+  if (progress > 1){progress = 1;}
   bar.animate(progress);  // Number from 0.0 to 1.0
 
    $.fn.visible = function(partial) {
