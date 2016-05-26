@@ -26,13 +26,13 @@ class SponsorsController < ApplicationController
     Stripe.api_key = "sk_test_OgmM5tL6FSzS7ULyDFIuUYbn"
     token = params[:stripeToken]
     # Create the charge on Stripe's servers - this will charge the user's card
-    flash[:notice] = "Thanks for buying a Ticket to WDI Conf!! "
+    flash[:notice] = "Thank you for sponsoring WDI Conf. Your company logo has been added below. Please check your email for further information - we will be in touch. (Click to close)"
     # sending conformation email
     Pony.mail({
   	:from => 'isha.negi19@gmail.com',
     :to => "#{params[:email]}",
-    :subject => "Ticket Confirmation from WDIConf 2016",
-    :body => "Dear #{params[:first_name]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{params[:stripeToken]}. Regards, WDI.",
+    :subject => "Thanks for your support of WDI Conf 2016!",
+    :body => "Dear #{params[:first_name]}, We thank #{params[:company_name]} so much for your generous support of WDI Conf. Your complimentary tickets and advertising information will be sent in a follow up email. Kind regards, the organisers of WDI Conf",
     :via => :smtp,
     :via_options => {
       :address              => 'smtp.gmail.com',
