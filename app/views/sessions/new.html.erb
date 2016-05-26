@@ -1,13 +1,15 @@
-<h1>Admin Login</h1>
+<div class = "login-container">
+  <h1>Admin Login</h1>
 
-<%= form_for(:session, url: login_path) do |f| %>
+  <%= form_for(:session, url: login_path) do |f| %>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
 
-  <%= f.submit "Log in" %>
+    <%= f.submit "Log in" %>
 
-<% end %>
+  <% end %>
+</div>
