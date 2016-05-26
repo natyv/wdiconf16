@@ -32,13 +32,13 @@ class TicketsController < ApplicationController
     # create charge in ticket model
     new_ticket.my_save(params[:stripeToken])
     # get response from strip API.
-    flash[:notice] = "Thanks for buying ticket/s to WDI Conf! Please check your email for confirmation. We look forward to seeing you there."
+    flash[:notice] = "Thanks for buying ticket/s to WDI Conf! Please check your email for confirmation. We look forward to seeing you there. (Click to close)"
     # sending conformation email
     Pony.mail({
   	:from => 'isha.negi19@gmail.com',
     :to => "#{params[:email]}",
     :subject => "Ticket Confirmation from WDIConf 2016",
-    :body => "Dear #{params[:firstname]}, Thanks for purchasing a WDIConf Ticket. Your ticket number is #{reference_id}. Regards, WDI.",
+    :body => "Dear #{params[:firstname]}, Thanks for purchasing ticket/s to WDI Conf. Your reference number is #{reference_id}. We look forward to seeing you on May 27 2016 at General Assembly, Level 12A, 45 William Street, Melbourne! Kind regards, WDI Conf Organisers.",
     :via => :smtp,
     :via_options => {
       :address              => 'smtp.gmail.com',
