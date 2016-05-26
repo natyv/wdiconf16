@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="sponsorship-container">
+  <div class="sponsorship-container">
         <form action="/sponsors/submit" method="post" id="payment-form">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
@@ -79,55 +79,9 @@
                   </p>
 
     </ul>
-  </section>
-</div></div>
-
-
-
-
-<!-- 
-<form action="/sponsors/submit" method="post" id="payment-form">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <label for="">Total Amount: $</label>
-    <input type="text" name="amount">
-
-  <h2>Your information</h2>
-    <label for="">Company name</label>
-    <input type="text" name="company_name" value="">
-    <label for="">Website</label>
-    <input type="text" name="website" value="">
-    <label for="">First name</label>
-    <input type="text" name="first_name" value="">
-    <label for="">Last name</label>
-    <input type="text" name="last_name" value="">
-    <label for="">Email</label>
-    <input type="text" name="email" value="">
-    <label for="">Logo URL</label>
-    <input type="text" name="image_url" value="">
-
-  <h2>Payment information</h2>
-
-  <span class="payment-errors"></span>
-
-    <label>Card Number</label>
-    <input type="text" size="20" data-stripe="number">
-
-    <label>Expiration (MM/YY)</label>
-    <input type="text" size="2" data-stripe="exp_month">
-    <span> / </span>
-    <input type="text" size="2" data-stripe="exp_year">
-
-    <label>CVC</label>
-    <input type="text" size="4" data-stripe="cvc">
-
-    <input id="submit-payment-btn" type="submit" class="submit" value="Submit Payment">
-</form>
-
+    </section>
   </div>
 </div>
-
-
- -->
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
