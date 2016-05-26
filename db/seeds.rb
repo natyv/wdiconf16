@@ -9,7 +9,7 @@
 Speaker.destroy_all
 Sponsor.destroy_all
 
-Speaker.create(name: 'LJ', description: 'LJ is an enthusiastic junior developer with a passion for creating responsive CSS layouts and hip hop music', image_url: 'LJ.png', talk: "How to run a hip hop website" )
+Speaker.create(name: 'LJ', description: 'LJ is a traveller at heart and programmer in heat. With a Hip Hop background LJ bashes out brackets like DJs bang out beats', image_url: 'LJ.png', talk: "Selling Success IS The Path To Success" )
 
 Speaker.create(name: 'Nat', description: 'Nat is a great junior backend developer with a passion for getting kids interested in coding', image_url: 'Pranati.png', talk: "Ruby Basics" )
 

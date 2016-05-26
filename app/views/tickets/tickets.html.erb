@@ -74,14 +74,14 @@
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
 $(function(){
-var $select = $(".1-10");
-for (i=1;i<=10;i++){
-$('#num_of_tickets').append($('<option></option>').val(i).html(i));
-console.log('jhkn');
-}
+  var $select = $(".1-10");
+    for (i=1;i<=10;i++){
+    $('#num_of_tickets').append($('<option></option>').val(i).html(i));
+    console.log('jhkn');
+  }
 });
 $("#num_of_tickets").change(function(){
-$('#amount').html($(this).val()*200);
+  $('#amount').html($(this).val()*200);
 });
 Stripe.setPublishableKey('pk_test_r8NTA6dpseAgBXLp56mMQgGA');
 </script>

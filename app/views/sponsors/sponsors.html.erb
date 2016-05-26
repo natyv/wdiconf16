@@ -1,4 +1,23 @@
 <div class="container">
+  <div class="container">
+      <div class="row">
+        <div class="one-third column value">
+          <h2 class="value-multiplier">1</h2>
+          <h5 class="value-heading">WDI Conf</h5>
+          <p class="value-description">Engage with relevent industry proffessionals.</p>
+        </div>
+        <div class="one-third column value">
+          <h2 class="value-multiplier">2</h2>
+          <h5 class="value-heading">Sponsor WDI Conf</h5>
+          <p class="value-description">Build strong brand relationships with attendees by directly impacting the ticket price and their out of pocket expenses.</p>
+        </div>
+        <div class="one-third column value">
+          <h2 class="value-multiplier">3</h2>
+          <h5 class="value-heading">WDI Conf</h5>
+          <p class="value-description">Participate actively on the day and have your brand recognised for their contributions.</p>
+        </div>
+      </div>
+    </div>
   <div class="sponsorship-container">
     <form action="/sponsors/submit" method="post" id="payment-form">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
@@ -73,7 +92,25 @@
     </form>
   </div>
 </div>
+
+<!-- modal -->
+<div id="processing-notice" class="modal">
+  <div class="modal-content">
+    <p>Please wait while we are processing your payment ...</p>
+  </div>
+</div>
+
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-Stripe.setPublishableKey('pk_test_r8NTA6dpseAgBXLp56mMQgGA');
-</script>
+$(function(){
+  var $select = $(".1-10");
+    for (i=1;i<=10;i++){
+    $('#num_of_tickets').append($('<option></option>').val(i).html(i));
+    console.log('THANK YOU FOR YOUR CASH MONEY');
+  }
+});
+$("#num_of_tickets").change(function(){
+  $('#amount').html($(this).val()*200);
+});
+Stripe.setPublishableKey('pk_test_r8NTA6dpseAgBXLp56mMQgGA');</script>
+
