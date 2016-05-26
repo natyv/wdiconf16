@@ -27,7 +27,7 @@
                     <div class="col-span-50">
                     <input type="text" id="acctEmail" name="email" value="" placeholder="Email" />
                       </div>
-                    <div class="col-span-50">          
+                    <div class="col-span-50">
                       <input type="text" id="acctEmail" name="image_url" value="" placeholder="URL to Logo Image" />
                     </div>
                   </li>
@@ -38,7 +38,7 @@
                 </ul>
 
               </section>
-                  
+
                   <span class="payment-errors"></span>
 
               <section class="paymentInformation">
@@ -49,7 +49,7 @@
                       <input type="text" data-stripe="number" id="cardNumber" size="20" name="cardNumber" placeholder="Credit Card #" />
                     </div>
                   </li>
-                  
+
                   <li>
                     <div class="col-span-50">
                       <input type="text" data-stripe="exp_month" id="expMonth" size="2" name="expMonth" placeholder="Expiration Month (MM)" />
@@ -78,8 +78,52 @@
                     Charge my credit card for the full ticket price of $200. On the 26th May the final price (only equal to or less than $200) will be confirmed, and you will be refunded the difference.
                   </p>
 
-    </ul>
-    </section>
+    </ul>    </section>
+
+</div></div>
+
+
+
+
+<!--
+<form action="/sponsors/submit" method="post" id="payment-form">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="">Total Amount: $</label>
+    <input type="text" name="amount">
+
+  <h2>Your information</h2>
+    <label for="">Company name</label>
+    <input type="text" name="company_name" value="">
+    <label for="">Website</label>
+    <input type="text" name="website" value="">
+    <label for="">First name</label>
+    <input type="text" name="first_name" value="">
+    <label for="">Last name</label>
+    <input type="text" name="last_name" value="">
+    <label for="">Email</label>
+    <input type="text" name="email" value="">
+    <label for="">Logo URL</label>
+    <input type="text" name="image_url" value="">
+
+  <h2>Payment information</h2>
+
+  <span class="payment-errors"></span>
+
+    <label>Card Number</label>
+    <input type="text" size="20" data-stripe="number">
+
+    <label>Expiration (MM/YY)</label>
+    <input type="text" size="2" data-stripe="exp_month">
+    <span> / </span>
+    <input type="text" size="2" data-stripe="exp_year">
+
+    <label>CVC</label>
+    <input type="text" size="4" data-stripe="cvc">
+
+    <input id="submit-payment-btn" type="submit" class="submit" value="Submit Payment">
+</form>
+
+>>>>>>> 55e8e47dd71c0f20f65a3e3378ec31e236c20394
   </div>
 </div>
 
