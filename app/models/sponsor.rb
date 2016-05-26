@@ -27,8 +27,10 @@ class Sponsor < ActiveRecord::Base
   def self.total_sponsorship
     amount = 0
     Sponsor.all.each do |sponsor|
+      unless sponsor.amount.nil?
       amount += sponsor.amount
     end
+  end
     amount
   end
 
