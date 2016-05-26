@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
    <!-- CSS -->
-   <% if request.path == '/tickets' || request.path == 'tickets/submit' %>
+   <% if request.path == '/tickets' || request.path == 'tickets/submit' || request.path == '/sponsors' || request.path == '/sponsors/submit'%>
    <%= javascript_include_tag 'payment', 'data-turbolinks-track' => true %>
   <% else %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -33,7 +33,7 @@
 
   <!-- Fonts -->
 
-  
+
 
 </head>
 <body>

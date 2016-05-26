@@ -1,5 +1,5 @@
 <!-- Payment Confirmation  -->
-<div class= "notice">
+<div class="notice">
     <% if flash[:notice] %>
     <%= flash[:notice] %>
     <% end %>
@@ -8,28 +8,173 @@
 <!-- END Payment Confirmation  -->
 
 <div class="hero-background">
+<!-- stars   -->
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<!-- end of stars -->
   <div class="hero-container">
-      <div class="one-half column">
+      <div class="">
           <!-- chart code -->
           <span id="progress" style="display:none"><%= @progress %></span>
             <div class="chart-wrapper">
               <div id="progresschart">
                 <div id="inside-text">
-                  <p><%= @progress * 100 %>% funded!</p>
+                  <% if @progress < 1 %>
+                    <p><%= @progress * 100 %>% funded!</p>
+                  <% else %>
+                    <p> Free ticket! </p>
+                  <% end %>
                   <p>Current ticket price: $<%= @current_price %></p>
-                  <p><a href="#">What does this mean?</a></p>
+                  <p><a href="#" id="info-link">What does this mean?</a></p>
                 </div>
               </div>
             </div>
           <!-- end of chart code -->
       </div>
-      <div class="one-half column header-info">
+      <div class="header-info">
           <h1 class="marker">WDI Conf</h1>
           <h2 class="feature">Melbourne</h2>
           <p>May 27th, 2016 | General Assembly</p>
           <p>The first fully sponsor funded conference!</p>
-          <button class="btn">Sponsor</button>
-          <button class="btn">Buy Tickets</button>
+          <button class='btn'><a href="/sponsors">Sponsor</a></button>
+          <button class='btn'><a href="/tickets">Buy Tickets</a></button>
       </div>
   </div>
 </div>
+
+<div id="overlay">
+  <div id="modal">
+    <h4>What's this all about?</h4>
+    <p>
+      WDI Conf is a world first conference, built to bridge the gap between attendees and sponsors in directly influencing the ticket price. Our conference attendees get to attend a world class conference, potentially for free due to the generosity of organizations within the industry.
+    </p>
+    <h4>How it works for attendees</h4>
+    <p>
+      We've put together an awesome conference, and the full ticket price reflects the value of the speakers and allows us to run a valuable event for our attendees. The sponsorship directly influences the final price of the tickets, and we feel this will help get people from all sorts of backgrounds to attend and get involved in tech.
+    </p>
+    <h4>How it works for sponsors</h4>
+    <p>
+      We realize how important sponsors are in putting together a conference, and want to create a strong bond and recognition between attendee and sponsor by impacting the attendee's wallet!<br>
+      To make it easier to sponsor, we are trialling an automated process for companies to donate a little or a lot.<br>
+      Conferences like this also go a long way to contributing to the ongoing development of people within the industry.
+    </p>
+  </div>
+</div>
+<script>
+    var colors = {
+  	"gray": "font-weight: bold; color: #1B2B34;",
+  	"red": "font-weight: bold; color: #EC5f67;",
+  	"orange": "font-weight: bold; color: #F99157;",
+  	"yellow": "font-weight: bold; color: #FAC863;",
+  	"green": "font-weight: bold; color: #99C794;",
+  	"teal": "font-weight: bold; color: #5FB3B3;",
+  	"blue": "font-weight: bold; color: #6699CC;",
+  	"purple": "font-weight: bold; color: #C594C5;",
+  	"brown": "font-weight: bold; color: #AB7967;"
+  }
+
+  console.log('%cMade with Love by The Splice Girls', colors.red);
+  console.log('%cChristie', colors.orange);
+  console.log('%cIsha', colors.yellow);
+  console.log('%cLJ', colors.teal);
+  console.log('%cKarina', colors.blue);
+  console.log('%cPranati', colors.purple);
+</script>

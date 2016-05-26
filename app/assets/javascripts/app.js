@@ -1,5 +1,19 @@
+
 // Transition animation for speakers
 $( document ).ready(function() {
+
+  var overlay = $('#overlay');
+  // open info modal on click
+  $('#info-link').on('click', function(event) {
+    event.preventDefault();
+    console.log(event);
+    overlay.show();
+  });
+  // close the modal
+  overlay.click(function() {
+    overlay.hide();
+  })
+
   var progressChart = document.getElementById('progresschart');
   var progress = document.getElementById('progress').innerHTML;
 
@@ -12,7 +26,7 @@ $( document ).ready(function() {
     trailWidth: 1,
     svgStyle: null
   });
-
+  if (progress > 1){progress = 1;}
   bar.animate(progress);  // Number from 0.0 to 1.0
 
    $.fn.visible = function(partial) {
@@ -95,6 +109,34 @@ infoMods.each(function(i, el) {
   }
 });
 });
+  $('#event1').addClass('selected-event');
+  $('#event-description').html('<h3>Keynote: contributing to open source as a junior</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>');
+
+  $('#timetable').on('mouseover click', '.event', function() {
+    $('tr').removeClass('selected-event');
+    $(this).addClass('selected-event');
+    $('#event-description').html(descriptions[this.id]);
+  });
+
+  $(".notice").on("click", function() {
+    $(this).hide("slow");
+  });
+ 
+ // Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+
 
 });
 //timetable
@@ -106,18 +148,6 @@ var descriptions = {
   event4: '<h3>Keynote: contributing to open source as a junior</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>',
   event5: '<h3>You Code Like a Girl. Good for you!</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>'
 };
-
-$(document).ready(function() {
-  $('#event1').addClass('selected-event');
-  $('#event-description').html('<h3>Keynote: contributing to open source as a junior</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa tenetur sed nemo odio pariatur laborum, aperiam autem totam, consequatur distinctio ipsum neque. Ipsa ex architecto sint voluptatem voluptas libero.</p>');
-
-  $('#timetable').on('click', 'tr', function() {
-    $('tr').removeClass('selected-event');
-    $(this).addClass('selected-event');
-    $('#event-description').html(descriptions[this.id]);
-  });
-
-});
 
 
 
@@ -184,21 +214,4 @@ var marker = new google.maps.Marker({
 });
 }
 
-$(document).ready(function(){
 
-	//Check to see if the window is top if not then display button
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('.scrollToTop').fadeIn();
-		} else {
-			$('.scrollToTop').fadeOut();
-		}
-	});
-
-	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
-
-});

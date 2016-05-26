@@ -3,6 +3,7 @@
 }
 
 .headshot {
+  width: 150px;
   border-radius: 50%;
 }
 
@@ -10,11 +11,7 @@
   transform: translateY(0.3em);
 }
 
-.speakers {
-  h4 {
-    text-align: center;
-  }
-}
+
 
 .talk {
   font-weight: bold;

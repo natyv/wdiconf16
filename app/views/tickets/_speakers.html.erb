@@ -8,7 +8,7 @@
     <% if speaker.id % 2 == 0 %>
         <div class="seven columns">
           <div class="one-third column">
-          <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
+          <img class="border headshot u-max-full-width" src="<%= image_path(speaker.image_url) %>">
           <h4><%= speaker.name %></h4>
           </div>
           <div class="two-thirds column">
@@ -21,7 +21,7 @@
 
         <div class="seven columns offset-by-five">
             <div class="one-third column">
-            <img class="border headshot u-max-full-width" src=<%= speaker.image_url %>>
+            <img class="border headshot u-max-full-width" src="<%= image_path(speaker.image_url) %>">
             <h4><%= speaker.name %></h4>
             </div>
             <div class="two-thirds column">
