@@ -134,8 +134,12 @@
           <h2 class="feature">Melbourne</h2>
           <p>May 27th, 2016 | General Assembly</p>
           <p>The first fully sponsor funded conference!</p>
-          <button class='btn'><a href="/sponsors">Sponsor</a></button>
-          <button class='btn'><a href="/tickets">Buy Tickets</a></button>
+          <form action= "/sponsors" method="get" style="display:inline">
+            <button class='btn'>Sponsor</button>
+          </form>
+          <form action= "/tickets" method="get" style="display:inline">
+            <button class='btn'>Buy Tickets</button>
+          </form>
       </div>
       <div class="ticket-info-sml">
         <% if @progress < 1 %>
@@ -186,4 +190,6 @@
   console.log('%cLJ', colors.teal);
   console.log('%cKarina', colors.blue);
   console.log('%cPranati', colors.purple);
+  console.log('%cThank you DT! And feel better soon!', colors.brown);
+
 </script>

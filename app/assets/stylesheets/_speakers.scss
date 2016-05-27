@@ -35,3 +35,16 @@
 @keyframes come-in {
   to { transform: translateX(0); }
 }
+
+@media (max-width: 400px) {
+  .come-in-left {
+    transform: none;
+    animation: none;
+  }
+
+  .come-in-right {
+    transform: none;
+    animation: none;
+  }
+
+}

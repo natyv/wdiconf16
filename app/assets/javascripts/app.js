@@ -14,6 +14,7 @@ $( document ).ready(function() {
     overlay.hide();
   })
 
+//Progress Chart code
   var progressChart = document.getElementById('progresschart');
   var progress = document.getElementById('progress').innerHTML;
 
