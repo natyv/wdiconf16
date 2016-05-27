@@ -46,7 +46,7 @@ body {
     right: 40%;
   }
   .hero-container {
-    margin-top: 12em !important;
+    margin-top: 10% !important;
   }
   .header-info {
     position: absolute;
@@ -57,6 +57,7 @@ body {
 }
 
 @media (max-width: 1075px) {
+
   #progresschart {
     display: none;
   }
