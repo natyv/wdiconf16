@@ -8,6 +8,7 @@ The WDI Conference is a hypothetical conference that GA web development (WDI6) i
 * Ruby on rails
 * Sass
 * Javascript & jQuery
+* Image magick
 * Stripe (payment gateway)
 * Proressbarjs (chart animation library)
 * Postgres (database)
