@@ -8,6 +8,7 @@ The WDI Conference is a hypothetical conference that GA web development (WDI6) i
 * Ruby on rails
 * Sass
 * Javascript & jQuery
+* Image magick
 * Stripe (payment gateway)
 * Proressbarjs (chart animation library)
 * Postgres (database)
@@ -21,7 +22,8 @@ If you would like to clone / fork our repo, here are the installation steps:
 3. Run `rake db:create`
 4. Run `rake db:migrate`
 5. Run `rake db:seed`
-6. Start your rails server with `rails s` and check out on port 3000 :boom:
+6. Run `bundle` to install the app's dependencies
+7. Start your rails server with `rails s` and check out on port 3000 :boom:
 
 ## Made with girl power by The Splice Girls
 
