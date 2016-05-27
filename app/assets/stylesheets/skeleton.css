@@ -160,8 +160,8 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #FFFFFF; }
-a:hover {
-  color: #B97375; }
+/*a:hover {
+  color: #B97375; }*/
 
 a:before {
   -webkit-transition: all 0.7s ease;

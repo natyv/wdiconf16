@@ -1,15 +1,14 @@
-<div class = "login-container">
-  <h1>Admin Login</h1>
-
-  <%= form_for(:session, url: login_path) do |f| %>
-
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.submit "Log in" , class: "btn"%>
-
-  <% end %>
+<div class= "container">
+  <div class= "login-container">
+    <h1 id="sponsor-header">Admin Login</h1>
+    <div class = "tickets-container">
+      <%= form_for(:session, url: login_path) do |f| %>
+      <ul><li><%= f.label :username %>
+      <%= f.text_field :username %></li>
+      <li><%= f.label :password %>
+      <%= f.password_field :password %></li>
+      <li><%= f.submit "Log in" , class: "btn"%></li>
+      <% end %>
+    </div>
+  </div>
 </div>
