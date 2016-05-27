@@ -23,10 +23,10 @@ If you would like to clone / fork our repo, here are the installation steps:
 5. Run `rake db:seed`
 6. Start your rails server with `rails s` and check out on port 3000 :boom:
 
-## Made by The Splice Girls
+## Made with girl power by The Splice Girls
 
-https://github.com/christiearcus
-https://github.com/natyv
-https://github.com/nakarielle
-https://github.com/isha1111
-https://github.com/LJKenward
+* https://github.com/christiearcus
+* https://github.com/natyv
+* https://github.com/nakarielle
+* https://github.com/isha1111
+* https://github.com/LJKenward
