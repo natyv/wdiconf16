@@ -30,8 +30,10 @@ body {
 }
 .marker {
   font-family: 'Permanent Marker', cursive;
-  color: $feature-color;
+  color:$feature-color;
+  font-size: 6em;
 }
+
 .feature {
   color: $light-color;
 }
