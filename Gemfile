@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'puma'
 
+gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
