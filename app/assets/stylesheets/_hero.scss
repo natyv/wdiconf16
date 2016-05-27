@@ -30,8 +30,10 @@ body {
 }
 .marker {
   font-family: 'Permanent Marker', cursive;
-  color: $feature-color;
+  color:$feature-color;
+  font-size: 6em;
 }
+
 .feature {
   color: $light-color;
 }
@@ -106,8 +108,8 @@ body {
 .hero-background {
   height: 100vh;
   background-color: #220022;
-  background-image: -webkit-radial-gradient(ellipse farthest-corner at 45px 45px, #360036 0%, #000000 50%, #360036 95%);
-  background-image: radial-gradient(ellipse farthest-corner at 45px 45px, #360036 0%, #000000 50%, #360036 95%);
+  background-image: -webkit-radial-gradient(ellipse farthest-corner at 45px 45px, $dark-color 0%, #000000 50%, $dark-color 95%);
+  background-image: radial-gradient(ellipse farthest-corner at 45px 45px, $dark-color 0%, #000000 50%, $dark-color 95%);
   overflow: hidden;
 }
 

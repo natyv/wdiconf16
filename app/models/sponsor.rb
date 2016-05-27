@@ -1,3 +1,6 @@
+require 'RMagick'
+
+
 class Sponsor < ActiveRecord::Base
 
   def self.convert_logo(logo, size)
@@ -8,7 +11,7 @@ class Sponsor < ActiveRecord::Base
     image = image.transparent('white')
     image = image.level(- Magick::QuantumRange * 0.15, Magick::QuantumRange * 1.6)
     image = image.quantize(65535,Magick::GRAYColorspace).contrast(true)
-    image.to_blob { |img| img.format = 'png' }    
+    image.to_blob { |img| img.format = 'png' }
   end
 
   private

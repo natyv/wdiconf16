@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
+gem 'rails_12factor', group: :production
+
 gem 'puma'
+
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -28,7 +34,7 @@ gem 'stripe'
 
 gem 'pony'
 
-gem 'rmagick', '2.13.2'
+gem 'rmagick', :require => 'RMagick'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
